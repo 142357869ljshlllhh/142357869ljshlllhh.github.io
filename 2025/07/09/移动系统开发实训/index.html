@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="John Doe">
+
+
+
+
+
+
+
+<title>移动系统开发实训 | Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Frame.
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/categories/gallery/">Gallery</a>
+              </li> 
+                   
+          
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+                
+                    <span class="post-tag">
+                        <a href="/tags/%E5%BF%83%E5%BE%97/">
+                            心得
+                        </a>
+                    </span>    
+                           
+            
+        </div>
+        <div class="post-title">
+            
+            
+                移动系统开发实训
+            
+            
+        </div>
+        <span class="post-date">
+            Jul 9, 2025
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <p>     这是暑期实训时记录的一些笔记和心得，学习了ArkTS的语法，与其说是学习新语言，不如说是温习了一些编程相关的知识，模仿老师的一些编程风格，时间蛮赶的，很多东西需要值得消化。</p>
+<h1 id="一、开发工具："><a href="#一、开发工具：" class="headerlink" title="一、开发工具："></a>一、开发工具：</h1><ol>
+<li>devEco Studio</li>
+</ol>
+<h1 id="二、ArkTS"><a href="#二、ArkTS" class="headerlink" title="二、ArkTS"></a>二、ArkTS</h1><h2 id="调试输出与注释"><a href="#调试输出与注释" class="headerlink" title="调试输出与注释"></a>调试输出与注释</h2><ol>
+<li><p>调试输出：console.log(参数1，参数2,…)  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(&quot;周三&quot;) //日志</span><br></pre></td></tr></table></figure>
+<p>多个参数用英文逗号分隔，第一个参数必须是字符串。  </p>
+</li>
+<li><p>注释：  </p>
+<ul>
+<li>单行注释：&#x2F;&#x2F;  </li>
+<li>多行注释：&#x2F;： ：&#x2F;</li>
+</ul>
+</li>
+</ol>
+<h2 id="变量、常量、数据类型"><a href="#变量、常量、数据类型" class="headerlink" title="变量、常量、数据类型"></a>变量、常量、数据类型</h2><ol>
+<li>变量：  <ul>
+<li>声明：let 变量名：类型;<br>声明并初始化：let 变量名：类型 &#x3D; 值1;  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let student01:string = &#x27;jack&#x27; </span><br></pre></td></tr></table></figure></li>
+<li>不能以数字开头，不能包含运算符，严格区分大小写，不能以关键字命名</li>
+<li>为了提升代码可读性：使用字符数字下划线或$命名；尽量见名知义；用下划线分割多个单词</li>
+<li>赋值</li>
+</ul>
+</li>
+<li>常量：程序运行中始终不变的数据，通常const声明的常量名全大写  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let STUDENT:string = &#x27;tom&#x27;;</span><br></pre></td></tr></table></figure></li>
+<li>数据类型：</li>
+</ol>
+<ul>
+<li>string（字符串）：可以用单引号，双引号，反引号标注（模板字符串，通过${变量名}来使用变量的值）     <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let stu1:string = &#x27;jack&#x27;;</span><br><span class="line">let stu2:string = &#x27;rose&#x27;;</span><br><span class="line">let introduce:string = `$&#123;stu1&#125;和$&#123;stu2&#125;是好伙伴`;</span><br></pre></td></tr></table></figure></li>
+<li>number（数字）：分为整数、浮点数和特殊值，数字前可加-表示负号  <ul>
+<li>整数：可赋值为二进制、八进制、十进制、十六进制  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let bin:number = 0b11010</span><br><span class="line">let oct:number = 0o32</span><br><span class="line">let dec:number = 26</span><br><span class="line">let hex:number = 0x1a;</span><br></pre></td></tr></table></figure></li>
+<li>浮点数  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let fnumber01:number = -3.14;</span><br><span class="line">let fnumber02:number = 3.14;</span><br></pre></td></tr></table></figure></li>
+<li>特殊值：  <ul>
+<li>Infinity：计算结果超出了最大可表示数字</li>
+<li>-Infinity：计算结果超出了最小可表示数字</li>
+<li>NaN（not a number）：进行了非法运算操作，不是数字</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>boolean（布尔）     <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let result01:boolean = true;</span><br><span class="line">let result02:boolean = false;</span><br></pre></td></tr></table></figure></li>
+<li>null（空）：变量为指向任何对象   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let empty:null = null;</span><br></pre></td></tr></table></figure></li>
+<li>void（空）：函数没有返回值     <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let data:void;</span><br></pre></td></tr></table></figure></li>
+<li>undefined（未定义）：声明的对象未赋值   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let num01:undefined = undefined;</span><br><span class="line">let num02:undefined;</span><br></pre></td></tr></table></figure></li>
+<li>object（对象）</li>
+</ul>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ol>
+<li>算术运算符  <ul>
+<li>+、-、*、&#x2F;、%  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let a=10,b=3,c=3,d=3;</span><br><span class="line">console.log(&#x27;a+b&#x27;,(a+b));</span><br><span class="line">console.log(&#x27;a-b&#x27;,(a-b));</span><br><span class="line">console.log(&#x27;a*b&#x27;,(a*b));</span><br><span class="line">console.log(&#x27;a/b&#x27;,(a/b));</span><br><span class="line">console.log(&#x27;a%b&#x27;,(a%b));</span><br></pre></td></tr></table></figure></li>
+<li>自增自减：++a和a++对于a本身没有区别，都是自增1，但是一旦参与运算,前置先自增再参与运算，后置先参与运算再自增  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let s1 = ++a;</span><br><span class="line">console.log(&#x27;a=&#x27;,a);//a=11</span><br><span class="line">console.log(&#x27;s1=&#x27;,s1);//a==11</span><br><span class="line"></span><br><span class="line">let s2 = a++;</span><br><span class="line">console.log(&#x27;a=&#x27;,a);//a=12</span><br><span class="line">console.log(&#x27;s2=&#x27;,s2);//a==11</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>字符串运算符  <ul>
+<li>字符串拼接（+）<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let username = &#x27;jack&#x27;;</span><br><span class="line">let gender = &#x27;male&#x27;;</span><br><span class="line">console.log(username + &#x27;,&#x27; + gender);</span><br><span class="line">console.log(username + 1000);</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>赋值运算符：&#x3D;、+&#x3D;、-&#x3D;、*&#x3D;、&#x2F;&#x3D;、%&#x3D;等</li>
+<li>比较运算符：&#x3D;&#x3D;（等于（值））、&#x3D;&#x3D;&#x3D;（全等（值+数据类型））  </li>
+<li>逻辑运算符：  <ul>
+<li>与：&amp;&amp;</li>
+<li>或：|| </li>
+<li>非：！</li>
+</ul>
+</li>
+<li>三元运算符：条件表达式 ？ 表达式1：表达式2；</li>
+<li>数据类型检测运算符：</li>
+</ol>
+<ul>
+<li>typeof 数据 单个数据</li>
+<li>typeof（数据） 可以对表达式进行检测</li>
+</ul>
+<h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><ol>
+<li>选择结构：   <ul>
+<li>（if语句）单分支、、双分支、多重分支（if、if…else…、if…else if…else）  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">//选择结构单分支</span><br><span class="line">let age1 = 21;</span><br><span class="line">if(age1&gt;18)&#123;</span><br><span class="line">  console.log(&quot;已成年&quot;);</span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line">//双分支</span><br><span class="line">let age2 = 16;</span><br><span class="line">if(age2&gt;18)&#123;</span><br><span class="line">  console.log(&quot;已成年&quot;);</span><br><span class="line">&#125;else&#123;</span><br><span class="line">  console.log(&quot;未成年&quot;);</span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line">//多重分支</span><br><span class="line">let score = 80;</span><br><span class="line">if(score &gt;= 90)&#123;</span><br><span class="line">  console.log(&quot;优秀&quot;);</span><br><span class="line">&#125;else if(score &gt;= 80)&#123;</span><br><span class="line">  console.log(&quot;良好&quot;);</span><br><span class="line">&#125;else if(score &gt;= 70)&#123;</span><br><span class="line">  console.log(&quot;一般&quot;);</span><br><span class="line">&#125;else if(score &gt;= 60)&#123;</span><br><span class="line">  console.log(&quot;合格&quot;);</span><br><span class="line">&#125;else&#123;</span><br><span class="line">  console.log(&quot;不及格&quot;)</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure></li>
+<li>switch（表达式）{<br>   case1:<br>代码段1；<br>  …<br>   default:<br>  代码段n;<br>}  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">   let week:number = 3;</span><br><span class="line">   let result:string;</span><br><span class="line">   switch(week)&#123;</span><br><span class="line">     case 0:</span><br><span class="line">       result = &#x27;星期天&#x27;;</span><br><span class="line">     case 1:</span><br><span class="line">       result = &#x27;星期一&#x27;;</span><br><span class="line">     case 2:</span><br><span class="line">        result = &#x27;星期二&#x27;;</span><br><span class="line">     case 3:</span><br><span class="line">       result = &#x27;星期三&#x27;;</span><br><span class="line">     case 4:</span><br><span class="line">       result = &#x27;星期四&#x27;;</span><br><span class="line">     case 5:</span><br><span class="line">       result = &#x27;星期五&#x27;;</span><br><span class="line">     case 6:</span><br><span class="line">       result = &#x27;星期六&#x27;;</span><br><span class="line">   &#125;</span><br><span class="line">2. 循环结构</span><br><span class="line">   * for循环：  </span><br><span class="line">         for（初始化变量1；条件表达式2；操作表达式3）&#123;    </span><br><span class="line">              循环体4；        </span><br><span class="line">   &#125;  </span><br></pre></td></tr></table></figure>
+for(let i&#x3D;1;i&lt;100;i++){<br>console.log(‘’,i);<br>}  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* while循环：  </span><br><span class="line">  while（条件表达式1）&#123;</span><br><span class="line">                      循环体2；  </span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+let i &#x3D;1;<br>while(i&lt;&#x3D;100){<br>console.log(‘’,i);<br>i++;<br>}  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* do...while循环：  </span><br><span class="line">   do&#123;  </span><br><span class="line">     循环体1；  </span><br><span class="line">   &#125;while（条件表达式2）；</span><br></pre></td></tr></table></figure>
+let j &#x3D; 1;<br>do{<br>console.log(‘’,j);<br>j++;<br>}while(j&lt;100);<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3. 跳转语句</span><br><span class="line">   * continue：  </span><br><span class="line">     终止循环，终止本层循环的本次循环  </span><br></pre></td></tr></table></figure>
+&#x2F;&#x2F;小明吃六个桃子，当吃第二个桃子时，发现里面有虫子，丢掉第二个继续吃剩下四个<br>for(let i &#x3D;1;i&lt;&#x3D;6;i++){<br>if(i &#x3D;&#x3D; 2){<br>  continue;<br>}<br>console.log(<code>小明吃完了第$&#123;i&#125;个桃子 </code>)<br>}<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* break：  </span><br><span class="line">  终止循环，终止本层循环</span><br></pre></td></tr></table></figure>
+&#x2F;&#x2F;小明吃六个桃子，当吃第二个桃子时，发现里面有虫子，于是剩下桃子都不吃了<br>for(let i &#x3D;1;i&lt;&#x3D;6;i++){<br>if(i &#x3D;&#x3D; 2){<br>  break;<br>}<br>console.log(<code>小明吃完了第$&#123;i&#125;个桃子</code>)<br>}  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 数组和枚举</span><br><span class="line">1. 数组：索引+值</span><br></pre></td></tr></table></figure>
+let fruits:string[] &#x3D; [‘苹果’,’橙子’,’香蕉’];<br>let index &#x3D; 1;<br>console.log(fruits[0]);<br>console.log(fruits[index])</li>
+</ul>
+</li>
+</ol>
+<p>&#x2F;&#x2F;添加<br>fruits[3] &#x3D; ‘草莓’;<br>console.log(fruits[3]);</p>
+<p>&#x2F;&#x2F;修改<br>fruits[2] &#x3D; ‘菠萝’;<br>console.log(fruits[2]);  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. 二维数组：行+列</span><br></pre></td></tr></table></figure>
+<p>let arr:number[][] &#x3D; [[23,45,73],[34,52,32]];<br>console.log(‘’,arr[0][0]);<br>console.log(‘’,arr[0]);</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">3. 枚举：  </span><br><span class="line">   * enum 枚举名（枚举常量名1，枚举常量名2...）  </span><br><span class="line">   * enum 枚举名（枚举常量名1 = 值1，枚举常量名2 = 值2，...）    </span><br><span class="line">   * 定义了枚举后，可用枚举名.枚举常量名访问枚举常量的值</span><br><span class="line">## 函数    </span><br><span class="line">* 内置函数（常用）：  </span><br><span class="line">    * parseInt()：将给定的数据转换成 number 类型的数据。并且省略数据的小数部分，返回数据的整数部分</span><br></pre></td></tr></table></figure>
+<pre><code>console.log(&#39;&#39;,parseInt(&#39;100.56&#39;));//100
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* parseFloat()：将给定的数据转换成 number 类型的浮点数  </span><br></pre></td></tr></table></figure>
+console.log(&#39;&#39;,parseFloat(&#39;1000.56&#39;))//100.56  
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* setTimeout()和 setInterval()：前者执行一次。后者以给定周期重复执行</span><br><span class="line">* clearTimeout()和 clearInterval()：清除对应的定时器  </span><br></pre></td></tr></table></figure>
+let time1 = setTimeout(()=&gt;&#123;
+  console.log(&#39;1秒输出1次&#39;);
+&#125;,1000);
+
+let time2 = setInterval(()=&gt;&#123;
+  console.log(&#39;setIntervl每隔一秒输出一次&#39;)
+&#125;,1000);  
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">* 自定义函数：   </span><br><span class="line">    * 定义：    </span><br><span class="line">function 函数名（参数）：返回值类型&#123;  </span><br><span class="line">   函数体；  </span><br><span class="line">&#125;  </span><br><span class="line">   * 调用：自动推断，类型断言</span><br></pre></td></tr></table></figure>
+</code></pre>
+<p>function sum7(num1:number,num2:number):number{<br>  return num1+num2;<br>}<br>console.log(‘’,sum7(10,20));</p>
+<p>function sum2(num1:number,num2:number){<br>  return num1+num2;<br>}<br>&#x2F;&#x2F;调用 自动推断<br>let s11 &#x3D; sum2(100,200);<br>&#x2F;&#x2F;类型断言<br>let s22 &#x3D; sum2(100,200) as number;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 箭头函数：  </span><br><span class="line">    * （参数1：类型，参数2：类型，...）：返回值类型=&gt;&#123;  </span><br><span class="line">      函数体  </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<pre><code>let sum3 = (num1:number,num2:number)=&gt;&#123;  
+ return num1+num2;
+</code></pre>
+<p>   }<br>   console.log(‘’,sum3(1000,2000));<br>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 当函数体只有一条语句且运行结果为函数的返回值时，可省略函数体的大括号和return关键字  </span><br></pre></td></tr></table></figure><br>    let sum33 &#x3D; (num1:number,num2:number)&#x3D;&gt;num1+num2;<br>    console.log(‘’,sum33(1,2));<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 函数自调用：  </span><br><span class="line">（（num1：number，num2：number）=&gt;&#123;  </span><br><span class="line">  console.log(&#x27;&#x27;,num1+num2)  </span><br><span class="line">&#125;）（1，2）;</span><br></pre></td></tr></table></figure><br>    ((num1:number,num2:number)&#x3D;&gt;{<br>      console.log(‘’,num1+num2);<br>    })(100,200);<br>    &#96;&#96;&#96; </p>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+                <div class="icon arrow-left"></div>
+                <div class="post-link">
+                    <a href="/2025/07/11/%E7%94%B5%E8%84%91%E5%BF%AB%E6%8D%B7%E9%94%AE/">Prev</a>
+                </div>
+            
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2025/06/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+    
+
+  </body>
+</html>

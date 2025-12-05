@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="John Doe">
+
+
+
+
+
+
+
+<title>移动系统开发实训 | Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Frame.
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/categories/gallery/">Gallery</a>
+              </li> 
+                   
+          
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+                
+                    <span class="post-tag">
+                        <a href="/tags/%E5%BF%83%E5%BE%97/">
+                            心得
+                        </a>
+                    </span>    
+                           
+            
+        </div>
+        <div class="post-title">
+            
+            
+                移动系统开发实训
+            
+            
+        </div>
+        <span class="post-date">
+            Jul 9, 2025
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <p>     这是暑期实训时记录的一些笔记和心得，学习了ArkTS和ArkUI，学习ArkTS与其说是学习新语言，不如说是温习了一些编程相关的知识，模仿老师的一些编程风格，大部分内容都能当场消化，老师讲的也很快，这部分内容很快就结束了；我虽然选修过html5+css3的课程，但是大部分内容都属于是涉猎，掌握并不牢固，而且没有接触到JavaScript内容，花了更多的时间</p>
+<h1 id="一、开发工具："><a href="#一、开发工具：" class="headerlink" title="一、开发工具："></a>一、开发工具：</h1><ol>
+<li>devEco Studio</li>
+</ol>
+<h1 id="二、ArkTS"><a href="#二、ArkTS" class="headerlink" title="二、ArkTS"></a>二、ArkTS</h1><h2 id="调试输出与注释"><a href="#调试输出与注释" class="headerlink" title="调试输出与注释"></a>调试输出与注释</h2><ol>
+<li><p>调试输出：console.log(参数1，参数2,…)  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(&quot;周三&quot;) //日志</span><br></pre></td></tr></table></figure>
+<p>多个参数用英文逗号分隔，第一个参数必须是字符串。  </p>
+</li>
+<li><p>注释：  </p>
+<ul>
+<li>单行注释：&#x2F;&#x2F;  </li>
+<li>多行注释：&#x2F;： ：&#x2F;</li>
+</ul>
+</li>
+</ol>
+<h2 id="变量、常量、数据类型"><a href="#变量、常量、数据类型" class="headerlink" title="变量、常量、数据类型"></a>变量、常量、数据类型</h2><ol>
+<li>变量：  <ul>
+<li>声明：let 变量名：类型;<br>声明并初始化：let 变量名：类型 &#x3D; 值1;  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let student01:string = &#x27;jack&#x27; </span><br></pre></td></tr></table></figure></li>
+<li>不能以数字开头，不能包含运算符，严格区分大小写，不能以关键字命名</li>
+<li>为了提升代码可读性：使用字符数字下划线或$命名；尽量见名知义；用下划线分割多个单词</li>
+<li>赋值</li>
+</ul>
+</li>
+<li>常量：程序运行中始终不变的数据，通常const声明的常量名全大写  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let STUDENT:string = &#x27;tom&#x27;;</span><br></pre></td></tr></table></figure></li>
+<li>数据类型：</li>
+</ol>
+<ul>
+<li>string（字符串）：可以用单引号，双引号，反引号标注（模板字符串，通过${变量名}来使用变量的值）     <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let stu1:string = &#x27;jack&#x27;;</span><br><span class="line">let stu2:string = &#x27;rose&#x27;;</span><br><span class="line">let introduce:string = `$&#123;stu1&#125;和$&#123;stu2&#125;是好伙伴`;</span><br></pre></td></tr></table></figure></li>
+<li>number（数字）：分为整数、浮点数和特殊值，数字前可加-表示负号  <ul>
+<li>整数：可赋值为二进制、八进制、十进制、十六进制  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let bin:number = 0b11010</span><br><span class="line">let oct:number = 0o32</span><br><span class="line">let dec:number = 26</span><br><span class="line">let hex:number = 0x1a;</span><br></pre></td></tr></table></figure></li>
+<li>浮点数  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let fnumber01:number = -3.14;</span><br><span class="line">let fnumber02:number = 3.14;</span><br></pre></td></tr></table></figure></li>
+<li>特殊值：  <ul>
+<li>Infinity：计算结果超出了最大可表示数字</li>
+<li>-Infinity：计算结果超出了最小可表示数字</li>
+<li>NaN（not a number）：进行了非法运算操作，不是数字</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>boolean（布尔）     <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let result01:boolean = true;</span><br><span class="line">let result02:boolean = false;</span><br></pre></td></tr></table></figure></li>
+<li>null（空）：变量为指向任何对象   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let empty:null = null;</span><br></pre></td></tr></table></figure></li>
+<li>void（空）：函数没有返回值     <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let data:void;</span><br></pre></td></tr></table></figure></li>
+<li>undefined（未定义）：声明的对象未赋值   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let num01:undefined = undefined;</span><br><span class="line">let num02:undefined;</span><br></pre></td></tr></table></figure></li>
+<li>object（对象）</li>
+</ul>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ol>
+<li>算术运算符  <ul>
+<li>+、-、*、&#x2F;、%  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let a=10,b=3,c=3,d=3;</span><br><span class="line">console.log(&#x27;a+b&#x27;,(a+b));</span><br><span class="line">console.log(&#x27;a-b&#x27;,(a-b));</span><br><span class="line">console.log(&#x27;a*b&#x27;,(a*b));</span><br><span class="line">console.log(&#x27;a/b&#x27;,(a/b));</span><br><span class="line">console.log(&#x27;a%b&#x27;,(a%b));</span><br></pre></td></tr></table></figure></li>
+<li>自增自减：++a和a++对于a本身没有区别，都是自增1，但是一旦参与运算,前置先自增再参与运算，后置先参与运算再自增  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let s1 = ++a;</span><br><span class="line">console.log(&#x27;a=&#x27;,a);//a=11</span><br><span class="line">console.log(&#x27;s1=&#x27;,s1);//a==11</span><br><span class="line"></span><br><span class="line">let s2 = a++;</span><br><span class="line">console.log(&#x27;a=&#x27;,a);//a=12</span><br><span class="line">console.log(&#x27;s2=&#x27;,s2);//a==11</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>字符串运算符  <ul>
+<li>字符串拼接（+）<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let username = &#x27;jack&#x27;;</span><br><span class="line">let gender = &#x27;male&#x27;;</span><br><span class="line">console.log(username + &#x27;,&#x27; + gender);</span><br><span class="line">console.log(username + 1000);</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>赋值运算符：&#x3D;、+&#x3D;、-&#x3D;、*&#x3D;、&#x2F;&#x3D;、%&#x3D;等</li>
+<li>比较运算符：&#x3D;&#x3D;（等于（值））、&#x3D;&#x3D;&#x3D;（全等（值+数据类型））  </li>
+<li>逻辑运算符：  <ul>
+<li>与：&amp;&amp;</li>
+<li>或：|| </li>
+<li>非：！</li>
+</ul>
+</li>
+<li>三元运算符：条件表达式 ？ 表达式1：表达式2；</li>
+<li>数据类型检测运算符：</li>
+</ol>
+<ul>
+<li>typeof 数据 单个数据</li>
+<li>typeof（数据） 可以对表达式进行检测</li>
+</ul>
+<h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><ol>
+<li>选择结构：   <ul>
+<li>（if语句）单分支、、双分支、多重分支（if、if…else…、if…else if…else）  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">//选择结构单分支</span><br><span class="line">let age1 = 21;</span><br><span class="line">if(age1&gt;18)&#123;</span><br><span class="line">  console.log(&quot;已成年&quot;);</span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line">//双分支</span><br><span class="line">let age2 = 16;</span><br><span class="line">if(age2&gt;18)&#123;</span><br><span class="line">  console.log(&quot;已成年&quot;);</span><br><span class="line">&#125;else&#123;</span><br><span class="line">  console.log(&quot;未成年&quot;);</span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line">//多重分支</span><br><span class="line">let score = 80;</span><br><span class="line">if(score &gt;= 90)&#123;</span><br><span class="line">  console.log(&quot;优秀&quot;);</span><br><span class="line">&#125;else if(score &gt;= 80)&#123;</span><br><span class="line">  console.log(&quot;良好&quot;);</span><br><span class="line">&#125;else if(score &gt;= 70)&#123;</span><br><span class="line">  console.log(&quot;一般&quot;);</span><br><span class="line">&#125;else if(score &gt;= 60)&#123;</span><br><span class="line">  console.log(&quot;合格&quot;);</span><br><span class="line">&#125;else&#123;</span><br><span class="line">  console.log(&quot;不及格&quot;)</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure></li>
+<li>switch（表达式）{<br>   case1:<br>代码段1；<br>  …<br>   default:<br>  代码段n;<br>}  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">   let week:number = 3;</span><br><span class="line">   let result:string;</span><br><span class="line">   switch(week)&#123;</span><br><span class="line">     case 0:</span><br><span class="line">       result = &#x27;星期天&#x27;;</span><br><span class="line">     case 1:</span><br><span class="line">       result = &#x27;星期一&#x27;;</span><br><span class="line">     case 2:</span><br><span class="line">        result = &#x27;星期二&#x27;;</span><br><span class="line">     case 3:</span><br><span class="line">       result = &#x27;星期三&#x27;;</span><br><span class="line">     case 4:</span><br><span class="line">       result = &#x27;星期四&#x27;;</span><br><span class="line">     case 5:</span><br><span class="line">       result = &#x27;星期五&#x27;;</span><br><span class="line">     case 6:</span><br><span class="line">       result = &#x27;星期六&#x27;;</span><br><span class="line">   &#125;</span><br><span class="line">2. 循环结构</span><br><span class="line">   * for循环：  </span><br><span class="line">         for（初始化变量1；条件表达式2；操作表达式3）&#123;    </span><br><span class="line">              循环体4；        </span><br><span class="line">   &#125;  </span><br></pre></td></tr></table></figure>
+for(let i&#x3D;1;i&lt;100;i++){<br>console.log(‘’,i);<br>}  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* while循环：  </span><br><span class="line">  while（条件表达式1）&#123;</span><br><span class="line">                      循环体2；  </span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+let i &#x3D;1;<br>while(i&lt;&#x3D;100){<br>console.log(‘’,i);<br>i++;<br>}  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* do...while循环：  </span><br><span class="line">   do&#123;  </span><br><span class="line">     循环体1；  </span><br><span class="line">   &#125;while（条件表达式2）；</span><br></pre></td></tr></table></figure>
+let j &#x3D; 1;<br>do{<br>console.log(‘’,j);<br>j++;<br>}while(j&lt;100);<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3. 跳转语句</span><br><span class="line">   * continue：  </span><br><span class="line">     终止循环，终止本层循环的本次循环  </span><br></pre></td></tr></table></figure>
+&#x2F;&#x2F;小明吃六个桃子，当吃第二个桃子时，发现里面有虫子，丢掉第二个继续吃剩下四个<br>for(let i &#x3D;1;i&lt;&#x3D;6;i++){<br>if(i &#x3D;&#x3D; 2){<br>  continue;<br>}<br>console.log(<code>小明吃完了第$&#123;i&#125;个桃子 </code>)<br>}<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* break：  </span><br><span class="line">  终止循环，终止本层循环</span><br></pre></td></tr></table></figure>
+&#x2F;&#x2F;小明吃六个桃子，当吃第二个桃子时，发现里面有虫子，于是剩下桃子都不吃了<br>for(let i &#x3D;1;i&lt;&#x3D;6;i++){<br>if(i &#x3D;&#x3D; 2){<br>  break;<br>}<br>console.log(<code>小明吃完了第$&#123;i&#125;个桃子</code>)<br>}  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## 数组和枚举</span><br><span class="line">1. 数组：索引+值</span><br></pre></td></tr></table></figure>
+let fruits:string[] &#x3D; [‘苹果’,’橙子’,’香蕉’];<br>let index &#x3D; 1;<br>console.log(fruits[0]);<br>console.log(fruits[index])</li>
+</ul>
+</li>
+</ol>
+<p>&#x2F;&#x2F;添加<br>fruits[3] &#x3D; ‘草莓’;<br>console.log(fruits[3]);</p>
+<p>&#x2F;&#x2F;修改<br>fruits[2] &#x3D; ‘菠萝’;<br>console.log(fruits[2]);  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. 二维数组：行+列</span><br></pre></td></tr></table></figure>
+<p>let arr:number[][] &#x3D; [[23,45,73],[34,52,32]];<br>console.log(‘’,arr[0][0]);<br>console.log(‘’,arr[0]);</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">3. 枚举：  </span><br><span class="line">   * enum 枚举名（枚举常量名1，枚举常量名2...）  </span><br><span class="line">   * enum 枚举名（枚举常量名1 = 值1，枚举常量名2 = 值2，...）    </span><br><span class="line">   * 定义了枚举后，可用枚举名.枚举常量名访问枚举常量的值</span><br><span class="line">## 函数    </span><br><span class="line">* 内置函数（常用）：  </span><br><span class="line">    * parseInt()：将给定的数据转换成 number 类型的数据。并且省略数据的小数部分，返回数据的整数部分</span><br></pre></td></tr></table></figure>
+<pre><code>console.log(&#39;&#39;,parseInt(&#39;100.56&#39;));//100
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* parseFloat()：将给定的数据转换成 number 类型的浮点数  </span><br></pre></td></tr></table></figure>
+console.log(&#39;&#39;,parseFloat(&#39;1000.56&#39;))//100.56  
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* setTimeout()和 setInterval()：前者执行一次。后者以给定周期重复执行</span><br><span class="line">* clearTimeout()和 clearInterval()：清除对应的定时器  </span><br></pre></td></tr></table></figure>
+let time1 = setTimeout(()=&gt;&#123;
+  console.log(&#39;1秒输出1次&#39;);
+&#125;,1000);
+
+let time2 = setInterval(()=&gt;&#123;
+  console.log(&#39;setIntervl每隔一秒输出一次&#39;)
+&#125;,1000);  
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">* 自定义函数：   </span><br><span class="line">    * 定义：    </span><br><span class="line">function 函数名（参数）：返回值类型&#123;  </span><br><span class="line">   函数体；  </span><br><span class="line">&#125;  </span><br><span class="line">   * 调用：自动推断，类型断言</span><br></pre></td></tr></table></figure>
+</code></pre>
+<p>function sum7(num1:number,num2:number):number{<br>  return num1+num2;<br>}<br>console.log(‘’,sum7(10,20));</p>
+<p>function sum2(num1:number,num2:number){<br>  return num1+num2;<br>}<br>&#x2F;&#x2F;调用 自动推断<br>let s11 &#x3D; sum2(100,200);<br>&#x2F;&#x2F;类型断言<br>let s22 &#x3D; sum2(100,200) as number;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 箭头函数：  </span><br><span class="line">    * （参数1：类型，参数2：类型，...）：返回值类型=&gt;&#123;  </span><br><span class="line">      函数体  </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<pre><code>let sum3 = (num1:number,num2:number)=&gt;&#123;  
+ return num1+num2;
+</code></pre>
+<p>   }<br>   console.log(‘’,sum3(1000,2000));<br>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 当函数体只有一条语句且运行结果为函数的返回值时，可省略函数体的大括号和return关键字  </span><br></pre></td></tr></table></figure><br>    let sum33 &#x3D; (num1:number,num2:number)&#x3D;&gt;num1+num2;<br>    console.log(‘’,sum33(1,2));<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 函数自调用：  </span><br><span class="line">（（num1：number，num2：number）=&gt;&#123;  </span><br><span class="line">  console.log(&#x27;&#x27;,num1+num2)  </span><br><span class="line">&#125;）（1，2）;</span><br></pre></td></tr></table></figure><br>    ((num1:number,num2:number)&#x3D;&gt;{<br>      console.log(‘’,num1+num2);<br>    })(100,200);<br>    &#96;&#96;&#96; </p>
+<h2 id="面向过程和面向对象"><a href="#面向过程和面向对象" class="headerlink" title="面向过程和面向对象"></a>面向过程和面向对象</h2><ol>
+<li>事物：静态+动态<br>对象：属性+方法  </li>
+<li>创建对象：<ul>
+<li>通过字面量创建对象  <ol>
+<li>定义接口：<br>interface 接口名{<br> 成员名1：类型;<br> 成员名2：类型;<br>}  </li>
+<li>使用接口名作为变量的类型：<br>let 变量名：接口名 &#x3D; {<br> 成员名1：值；<br> 成员名2：值；<br>}</li>
+</ol>
+</li>
+<li>通过类创建对象：  <ol>
+<li>创建类：<br>class 类名{<br> 属性名：类型&#x3D;值；<br> 方法名（属性：类型）：类型；<br>} </li>
+<li>通过类创建对象（类的实例化）：<br>let 变量名 &#x3D; new 类名；</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>实例成员：  <ul>
+<li>访问属性</li>
+<li>调用方法</li>
+<li>对象的引用传递</li>
+</ul>
+</li>
+<li>静态成员：  <ul>
+<li>static定义静态成员</li>
+<li>类名.静态成员名访问属性</li>
+</ul>
+</li>
+<li>构造方法（constructor）：</li>
+<li>链式调用  </li>
+<li>类的继承：  <ul>
+<li>class 子类名 extends 父类名   </li>
+<li>子类拥有父类的属性和方法  </li>
+<li>intance of 判断对象是否为某个类(包括继承关系中上层的类):<br> 变量名 intance of 类名;</li>
+<li>子类调用父类的方法（super）：</li>
+</ul>
+</li>
+<li>访问控制修饰符：<ul>
+<li>public  </li>
+<li>protected  </li>
+<li>private</li>
+</ul>
+</li>
+</ol>
+<h2 id="数组遍历"><a href="#数组遍历" class="headerlink" title="数组遍历"></a>数组遍历</h2><ol>
+<li>forEach遍历  </li>
+<li>map遍历</li>
+<li>for…of遍历</li>
+</ol>
+<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><ol>
+<li>for..catch  </li>
+<li>手动创建</li>
+</ol>
+<h1 id="三、ArtUI"><a href="#三、ArtUI" class="headerlink" title="三、ArtUI"></a>三、ArtUI</h1><h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><ol>
+<li>组件是独立的代码块，具有特定的功能和样式  <ul>
+<li>属性：定义组件的样式、数据、特性等  </li>
+<li>事件：定义组件的交互逻辑</li>
+</ul>
+</li>
+<li>组件的通用属性和事件：<br> 通用属性：  <ul>
+<li>width：设置宽度</li>
+<li>height：设置高度</li>
+<li>margin： 设置外边距</li>
+<li>padding：设置内边距</li>
+<li>background：设置背景</li>
+<li>backgroundColor：设置背景颜色</li>
+<li>border：设置边框的样式</li>
+<li>borderRadius：设置边框的圆角半径<br> 通用事件：  </li>
+<li>onClik：点击事件</li>
+</ul>
+</li>
+<li>使用方法：  <ul>
+<li>数字单位：vp（虚拟像素），在代码中，直接使用number类型的数字表示vp单位，使用string类型的百分比数来设置相对值  </li>
+<li>颜色的取值方式：<ul>
+<li>预定义的颜色名： Color.Red  </li>
+<li>十六进制颜色值： ‘#FFFF0000’</li>
+<li>RGB值：’ rgb(255,0,0)’</li>
+<li>RGBA值： ‘rgba(255,0,0,1)’</li>
+<li>资源中的颜色：”$r(‘app.color.资源名’)”</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="自定义组件："><a href="#自定义组件：" class="headerlink" title="自定义组件："></a>自定义组件：</h2><ol>
+<li>装饰器：<ul>
+<li>@Component:使用@Component装饰的struct具有组件化功能，成为一个独立的组件，即自定义组件，自定义组件内部必须使用 build()方法来描述UI结构</li>
+<li>@Entry：用于将一个自定义组件装饰为页面的入口组件，一个页面只能用一个入口组件</li>
+<li>@State：用于装饰自定义组件内的变量，以保存状态数据，所以被装饰的变量必须设置初始值</li>
+<li>@Preview：用于使自定义组件可以在预览器上预览，入口组件不需要添加即可预览，所以通常用于预览非入口组件</li>
+</ul>
+</li>
+<li>UI描述：指以声明式的方式来描述自定义组件的UI结构，代码写在 build()方法中</li>
+<li>struct： 指使用 struct 关键字声明的结构</li>
+</ol>
+<h2 id="常用组件："><a href="#常用组件：" class="headerlink" title="常用组件："></a>常用组件：</h2><ol>
+<li>Column 组件（纵向布局）：沿垂直方向布局其子组件的容器组件（超出父容器组件的宽度或高度的部分不会换行也不会出现滚动条）  <ul>
+<li>Column(value) value 参数为一个对象，包括space属性，用于设置垂直方向上子组件之间的间距<br>常用属性：</li>
+<li>alignItems(设置子组件在交叉轴（水平）方向上的对齐方式):<ul>
+<li>HorizontalAlign.Start:水平方向上左对齐    </li>
+<li>HorizontalAlign.Center：默认值，水平方向上居中对齐  </li>
+<li>HorizontalAlign.End：水平方向上右对齐</li>
+</ul>
+</li>
+<li>justifyContent（设置子组件在主轴（垂直）方向上的对齐方式）：<ul>
+<li>FlexAlign.Start：默认值，垂直方向上首端对齐</li>
+<li>FlexAlign.Center：垂直方向上中心对齐  </li>
+<li>FlexAlign.End：垂直方向上尾部对齐  </li>
+<li>FlexAlign.SpaceBetween：垂直方向上均匀分布（第一个子组件与首段边沿对齐，最后一个子组件与尾部边沿对齐）  </li>
+<li>FlexAlign.SpaceAround：垂直方向上均匀分布（第一个子组件到首端边沿的距离和最后一个子组件到尾部边沿的距离是相邻子组件之间距离的一半</li>
+<li>FlexAlign.SoaceEvenly：垂直方向上均匀分布（第一个子组件到首段边沿的距离，最后一个子组件到尾部边沿的距离和相邻子组件之间距离相等）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Row 组件（横向布局）：<ul>
+<li>Row(value)，value参数为一个对象，包含space属性，用于设置水平方向上子组件的间距<br>常用属性：  </li>
+<li>alignItems：设置子组件在垂直方向上的对齐方式：  <ul>
+<li>VerticalAlign.Top:垂直方向上顶部对齐</li>
+<li>VerticalAlign.Center：默认值，垂直方向上居中对齐  </li>
+<li>VerticalAlign.Bottom：垂直方向上底部对齐</li>
+</ul>
+</li>
+<li>justifyContent：类似于Column</li>
+</ul>
+</li>
+<li>Image 组件（图像）：支持PNG、JPEG、BMP、SVG、WebP、GIF<ul>
+<li>Image（src），src参数用于指定要显示的图像源<br>图像源：  <ul>
+<li>string类型：常用于加载网络图像</li>
+<li>Pixelmap类型：用于加载像素图像，常用于图像编辑场景</li>
+<li>resource类型：常用于加载本地图像，可以将图像放到entry&#x2F;src&#x2F;main&#x2F;resources&#x2F;base&#x2F;media目录下，通过$r()函数读取并转换成Resource格式<br>常用属性  </li>
+<li>alt：射中图像加载时显示的占位图  </li>
+<li>objectFit：设置图像的填充效果<ul>
+<li>ImageFit.Cover：默认值，保持宽高比进行缩小放大，若图像宽高比与显示区域不同，会被裁剪</li>
+<li>ImageFit.Contain：保持宽高比进行缩小放大，使图像完全显示在边界内</li>
+<li>ImageFit.Auto:自适应显示  </li>
+<li>ImageFit.Fill：不保持宽高比进行放大缩小</li>
+<li>ImageFit.ScaleDowm：保持宽高比，图像缩小或不变</li>
+<li>ImageFit.None：保持图像原有尺寸</li>
+</ul>
+</li>
+<li>interpolation： 设置图片的插值效果  <ul>
+<li>ImageInterpolation.Low:默认值，表示图像缩放时使用较低质量的插值算法</li>
+<li>ImageInterpolation.None:不使用插值算法，可能会导致图像显示锯齿或像素化</li>
+<li>ImageInterpolation.medium：图像缩放时使用中等质量的插值算法:  </li>
+<li>ImageInterpolation.Hign</li>
+</ul>
+</li>
+<li>objectRepeat：设置图像的重复样式<ul>
+<li>ImageRepeat.NoRepeat：默认值， 不重复绘制</li>
+<li>ImageRepeat.X：水平方向上重复绘制</li>
+<li>ImageRepeat.Y：垂直方向上重复绘制  </li>
+<li>ImageRepeat.XY：水平和垂直方向上重复绘制</li>
+</ul>
+</li>
+<li>renderMode：设置图像的渲染模式为原色或黑白<ul>
+<li>ImageRenderMode.Original：默认值，原色渲染</li>
+<li>ImageRenderMode.Template：黑白渲染</li>
+</ul>
+</li>
+<li>fillColor：设置填充颜色，仅对 SVG 格式生效</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Text 组件（文本组件）：Text（content），content参数用于设置文本内容，可以是string类型或Resource类型，前者直接写入文本内容，后者读取本地资源文件(使用$r()函数从entry&#x2F;src&#x2F;main&#x2F;resoureces&#x2F;zhCN&#x2F;element目录下的string.json文件)<br>常用属性：  <ul>
+<li>textAlign:设置文本段落在水平方向的对齐方式  <ul>
+<li>TextAlign.Start:默认值，左对齐  </li>
+<li>TextAlign.Center:居中对齐</li>
+<li>TextAlign.End：右对齐</li>
+</ul>
+</li>
+<li>textOverflow：设置文本超长时的显示方式<ul>
+<li>TextOverflow.Clip:默认值，裁剪</li>
+<li>TextOverflow.Ellipsis：显示不下用省略号代替</li>
+<li>TextOverflow.None：不进行裁剪</li>
+</ul>
+</li>
+<li>lineheight：设置文本的行高</li>
+<li>fontSize：设置文本的字号</li>
+<li>fontColor：设置文本的文字颜色</li>
+<li>fontWeight:设置文本的字体粗细</li>
+<li>letterSpacing:设置文本字符间距</li>
+<li>textCase:设置文本大小写  <ul>
+<li>TextCase.Normal:默认值，保持原有大小写</li>
+<li>TextCase.LowerCase:全小写</li>
+<li>TextCase.UpperCase:全大写</li>
+</ul>
+</li>
+<li>decoration:设置文本装饰样式及颜色  <ul>
+<li>TextDecorationType.None：默认值，不使用文本装饰线</li>
+<li>TextDecorationType.Overline：文本上方添加上划线  </li>
+<li>TextDecorationType.Underline：文本下方添加下划线  </li>
+<li>TextDecorationType.LineThrough：添加删除线</li>
+<li>文本装饰线默认黑色: Color.Black</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>TextInput 组件（单行文本输入框）：TextInput(value)，value参数时应该TextInputOptions类型的对象，包含placeholder属性（无输入时的提示文本），text属性（设置单行文本输入框当前的文本内容）：<br>常用属性：  <ul>
+<li>type：类型：<ul>
+<li>InputType.Normal:默认值，基本输入模式（数字、字母、下划线、空格、特殊字符）</li>
+<li>InputType.Password:密码输入模式（数字、字母、下划线、空格、特殊字符）</li>
+<li>InputType.Email:邮箱地址输入模式（数字、字母、下划线、一个@字符）</li>
+<li>InputType.Number:纯数字输入模式</li>
+<li>InputType.Phonenumber：电话号码输入模式，支持数字、+、-、*、#，长度不限</li>
+</ul>
+</li>
+<li>careColor：光标字体颜色</li>
+<li>placeholderColor：设置placeholder属性对应的文本字体颜色  </li>
+<li>placeholderFont：设置placeholder属性对应的文本样式，包括size属性（文本字号）、weight属性（字体粗细）、family属性（字体列表）、style属性（字体样式）<br>常用事件：  </li>
+<li>onChange：输入内容发生变化时触发</li>
+<li>onSubmit:按下”Enter”时触发</li>
+<li>onCopy：点击剪切板复制时触发</li>
+<li>onCut：点击剪切板剪切时触发</li>
+<li>onPaste：点击剪切板粘贴时触发</li>
+</ul>
+</li>
+<li>Button 组件（按钮）：<br>Button(label,options)<br>label参数用于设置按钮的文本内容，options参数为一个对象，包含type熟悉和stateEffect属性；当不传递label参数时，可以在Button组件内嵌套其他组件，语法格式如下:<br>Button(){<br>&#x2F;&#x2F;其他组件<br>}<br> 常用属性  <ul>
+<li>type：设置按钮显示样式  <ul>
+<li>ButtonType.Capsule：默认值，表示为胶囊型按钮，圆角半径默认为高度的一半  </li>
+<li>ButtonType.Circle：圆形按钮  </li>
+<li>ButtonType.Normal：普通按钮，不带圆角</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>slider 组件（滑动条）：通常用于快速调节设置值，常用在音量调节、亮度调节等<br> slider（options）  options参数为一个对象，用于设置滑动条的各种配置属性，常用配置属性如下：  <ul>
+<li>value：设置当前进度值  </li>
+<li>min：设置最小值，默认0  </li>
+<li>max：设置最大值，默认100  </li>
+<li>step：设置滑动条的滑动步长，默认为1，当值小于0，按默认值显示</li>
+<li>style：设置滑动条的滑块与滑轨显示样式：  <ul>
+<li>SliderStyle.OutSet：默认值，表示滑块在滑轨上</li>
+<li>SliderStyle.Inset：表示滑块在滑轨内</li>
+</ul>
+</li>
+<li>direction：涉资滑动条滑动方向为水平方向还是竖直方向：  <ul>
+<li>Axis.Horizontal：默认值，滑动方向为水平方向</li>
+<li>Axis.Vertical：表示滑动方向为竖直方向</li>
+</ul>
+</li>
+<li>reverse：设置滑动条取值范围是否反向，横向滑动条默认从左往右滑动，竖向滑动条默认为从上往下滑动：默认为false，表示滑动条取值范围是正向的，若值为true，表示滑动条的取值范围是反向的<br>常用属性：</li>
+<li>blockColor：设置滑块的颜色</li>
+<li>trackColor：设置滑轨的背景颜色  </li>
+<li>selectedColor：设置滑轨的已滑动部分颜色</li>
+<li>showSteps：设置当前是否显示步长刻度值，默认值为false</li>
+<li>showTips：设置滑动时是否显示百分比气泡提示，默认值为false</li>
+<li>trackThickness：设置滑轨的粗细，当配置属性style的值为SliderStyle.OutSet时，默认值为4，为SliderStyle.InSet时，默认值为20</li>
+</ul>
+</li>
+<li>Scroller 组件（滚动）：可滚动的容器组件，在scroll组件中，只能放置一个子组件<br>Scroll（scroller）：srcoller参数用于控制Scroll组件的滚动，scroller对象的常用属性：<ul>
+<li>scrollEdge：设置滚动到容器的哪个边缘：  <ul>
+<li>Edge.Top：垂直方向的顶部</li>
+<li>Edge.Bottom：垂直方向的底部</li>
+<li>Edge.Start：水平方向的起始位置</li>
+<li>Edge.End：水平方向的末尾位置</li>
+</ul>
+</li>
+<li>scrollPage：设置滚动到下一页还是上一页，接收一个对象为参数，该对象中包含一个next属性，表示是否向下翻页<br>组件的常用属性：  </li>
+<li>scrollable：设置滚动方向：<ul>
+<li>ScrollDirection.Vertical：默认值，垂直方向上滚动</li>
+<li>ScrollDirection.Horizontal：水平方向上滚动</li>
+<li>ScrollDirection.None：不可滚动</li>
+</ul>
+</li>
+<li>scrollBar：设置滚动条状态：  <ul>
+<li>BarState.Auto：默认值，按需显示，在触摸时显示，2s后消失</li>
+<li>BarState.On：常驻显示。</li>
+<li>BarState.Off：不显示</li>
+</ul>
+</li>
+<li>scrollBarColor：设置滚动条的颜色</li>
+<li>scrollBarWidth：设置滚动条的宽度，不支持百分比，默认值为4</li>
+<li>edgeEffect：设置边缘滑动效果:  <ul>
+<li>EdgeEffect.None：默认值，表示滑动到边缘后无效果</li>
+<li>EdgeEffect.Spring：表示滑动到边缘后可以根据初始速度或通过触摸事件继续滑动一段距离，松手后回弹  </li>
+<li>EdgeEffect.Fade：表示滑动到边缘后会显示圆弧状的阴影<br>组件区域变化事件：onAreaChange：其事件处理程序接受2个参数：oldValue和newValue：</li>
+</ul>
+</li>
+<li>oldValue表示目标组件变化之前的宽度、高度以及目标组件相对父组件和页面左上角的坐标位置</li>
+<li>newValue：表示目标组件变化之后的宽度、高度以及目标组件相对父组件和页面左上角的坐标位置</li>
+</ul>
+</li>
+<li>list 组件（列表）：List(value)：value参数为一个对象，包含spcae：设置列表项的间距；initalindex：设置列表项的初始索引位置；scroller：用于控制List组件的滚动<br>组件的常用属性：<ul>
+<li>listDirection：设置列表项的排列方向：<ul>
+<li>Axis.Vertical：默认值，表示纵向排列</li>
+<li>Axis。Horizontal：表示横向排列</li>
+</ul>
+</li>
+<li>divider：设置列表项分割线的样式，默认无分割线，属性的属性值为一个对象，该对象常用属性如下：<ul>
+<li>strokeWidth：设置分割线的宽度</li>
+<li>color：用于设置分割线的颜色</li>
+<li>startMargin：设置分割线与列表项侧边起始段的距离</li>
+<li>endMargin：设置分割线与列表项侧边结束端的距离</li>
+</ul>
+</li>
+<li>edgeEffect：设置列表的边缘滑动效果</li>
+</ul>
+</li>
+<li>Flex 组件（弹性）： 包含两根轴，主轴（水平方向），交叉轴（垂直方向），子组件默认沿主轴排列：Flex（value），value参数为一个对象，用于设置弹性布局相关的配置属性：</li>
+</ol>
+<ul>
+<li>direction：设置Flex容器中子组件的排列方向，即主轴的方向：<ul>
+<li>FlexDirection.Row：默认值：从左到右的水平方向</li>
+<li>FlexDirection.RowReverse：主轴从右往左的水平方向</li>
+<li>FlexDirection.Column：主轴从上往下的垂直方向</li>
+<li>FlexDirection.ColumnReverse：从下到上的垂直方向</li>
+</ul>
+</li>
+<li>warp：设置Flex容器中子组件的换行方式：<ul>
+<li>FlexWarp.NoWarp：默认值，不允许换行，Flex容器为单行或单列（可能会溢出）</li>
+<li>FlexWarp.Warp：允许换行，如果容器为多行或多列，子组件溢出部分会被放置到新的一行，第一行显示在上方<br> FlexWarp.WarpReverse：反方向换行，第一行显示在下方</li>
+</ul>
+</li>
+<li>justifyContent：设置Flex容器中子组件在主轴方向上的对齐方式：<ul>
+<li>FlexAlign.Start：默认值：表示子组件在主轴方向上首端对齐，第一个子组件与首端边沿对齐，后续字、子组件与前一个子组件对齐</li>
+<li>FlexAlign.Center：主轴方向上中心对齐</li>
+<li>FlexAlign.End：主轴方向上尾部对齐</li>
+<li>FlexAlign.SpaceBetween：主轴方向上均匀分布子组件，相邻子组件之间距离相同，第一个子组件与首端边沿对齐，最后一个子组件与尾部边沿对齐</li>
+<li>FlexAlign.SpaceAround：主轴方向上均匀分布，相邻子组件之间距离相同，第一个子组件到首端边沿的距离和最后一个子组件到尾部边沿的距离是相邻子组件之间距离的一半</li>
+<li>FlexAlign.SpaceEvenly：主轴方向上均匀分布子组件</li>
+</ul>
+</li>
+<li>alignItems：设置 Flex 容器中子组件在交叉轴方向上的对齐方式：  <ul>
+<li>ItemAlign.Stretch：子组件在容器中在交叉轴方向拉伸填充  </li>
+<li>ItemAlign.Start:默认值，在交叉轴方向首部对齐</li>
+<li>ItemAlign.Center：交叉轴方向居中对齐</li>
+<li>ItemAlign.End：交叉轴方向尾部对齐</li>
+<li>ItemAlign.Auto：使用 Flex 容器中默认配置</li>
+<li>ItemAlign.Baseline：在交叉轴方向文本基线对齐</li>
+</ul>
+</li>
+<li>alignContent：设置多轴线的对齐方式，适用于多行排列的情况，默认值是  FlexAlign.Start，属性值参考    justifyContent 属性</li>
+</ul>
+<ol start="11">
+<li>Grid 组件（网格）：由行和列的单元格组成，只能放置GridItem子组件<br>语法格式： Grid（scroller），scroller 参数用于控制Grid组件的滚动<br>常用属性：</li>
+</ol>
+<ul>
+<li>columnsTemplate：设置当前网格布局列的数量，不设置时默认一列，如’1fr 1fr 2fr’</li>
+<li>rowsTemplate：设置当前网格布局行的数量 </li>
+<li>columnsGap：设置列与列的间距，默认0</li>
+<li>rowsGap：设置行与行的间距，默认0</li>
+</ul>
+<ol start="12">
+<li>Stack 组件（堆叠）：堆叠容器组件，子组件按照顺序依次入栈，后一个子组件覆盖前一个子组件<br>语法格式：Stack（value），value 参数为一个对象，对象可以包含一个 alignContent 属性，用于设置子组件在堆叠方向上的对齐方式<br>alignContent属性的常用属性值：</li>
+</ol>
+<ul>
+<li>Alignment.TopStart：表示子组件位于顶部起始端  </li>
+<li>Alignment.Top：表示子组件位于顶部尾端  </li>
+<li>Alignment.TopEnd：表示子组件位于顶部尾端  </li>
+<li>Alignment.Start：表示子组件位于横向和纵向居中  </li>
+<li>Alignment.Center：表示子组件位于底部起始端  </li>
+<li>Alignment.End：表示子组件位于尾端纵向居中</li>
+<li>Alignment.BottomStart：表示子组件位于底部起始段</li>
+<li>Alignment.Bottom：表示子组件位于底部横向居中</li>
+<li>Alignment.BottomEnd：表示子组件位于底部尾端</li>
+</ul>
+<h2 id="组件多态样式"><a href="#组件多态样式" class="headerlink" title="组件多态样式"></a>组件多态样式</h2><p>ArkUI 提供了stateStyles()方法用于实现组件多态样式，语法格式如下：<br>stateStyles(value)：value参数为一个对象，用于设置组件不同内部状态的样式<br>常见的组件内部状态：  </p>
+<ul>
+<li>normal：组件无状态</li>
+<li>pressed：组件按下状态</li>
+<li>disabled：组件禁用状态</li>
+<li>foused：组件获取焦点状态</li>
+<li>clicked：组件点击状态</li>
+<li>selected：组件选中状态</li>
+</ul>
+<h2 id="双向数据绑定"><a href="#双向数据绑定" class="headerlink" title="双向数据绑定"></a>双向数据绑定</h2><p>组件的状态和变量的值绑定，组件的状态变化会自动更新变量的值，变量的值的变化会自动更新组件状态，CheckBox 组件、Slider 组件、TextInput 组件等支持双向数据绑定  </p>
+<ul>
+<li>实现双向数据绑定，首先要先定义状态变量，语法格式：@state 变量名:类型 &#x3D; 值;</li>
+<li>双向数据绑定的方式分为绑定参数和绑定属性：<ul>
+<li>绑定参数的语法格式：组件名({参数名:$$this.变量名})</li>
+<li>绑定属性的语法格式：<br> 组件名()<br>.属性名($$this.变量名)</li>
+</ul>
+</li>
+</ul>
+<h2 id="渲染语句"><a href="#渲染语句" class="headerlink" title="渲染语句"></a>渲染语句</h2><ol>
+<li>条件渲染语句：根据某个条件决定是否渲染某个组件</li>
+<li>循环渲染语句：使用 ForEach() 函数<br>ForEach（<br>arr:Array,<br>itemGenenator:(item:类型,index?:number) &#x3D;&gt; void,<br>keyGenerator?:(item:类型,index?:number):string &#x3D;&gt;string<br>) <ul>
+<li>arr 表示数据源，是一个数组</li>
+<li>itemGenerator 表示组件生成函数，item 参数表示数组中元素的值，index表示数组中元素的索引</li>
+<li>keyGenerator 表示键生成函数</li>
+</ul>
+</li>
+</ol>
+<h2 id="组件的导出和导入"><a href="#组件的导出和导入" class="headerlink" title="组件的导出和导入"></a>组件的导出和导入</h2><ul>
+<li>使用 export 关键字可以对组件进行到处，可以添加 default 关键字实现默认导出</li>
+<li>使用 import 关键字 可以对组件进行导入，导入后，在 build()方法中通过 组件名() 的方式可以使用组件</li>
+</ul>
+<h2 id="组件代码复用"><a href="#组件代码复用" class="headerlink" title="组件代码复用"></a>组件代码复用</h2><ol>
+<li>@Syles 装饰器：用于装饰一个方法，被装饰的方法可以编写多条通用属性和通用事件的代码，通过组件调用该方法即可复用方法中的代码<ul>
+<li>在 struct 外使用 @Styles 装饰器定义方法，可以在同一文件的所有 struct 中使用<br>@Styles<br>function 方法名(){}  </li>
+<li>在struct内使用 @styles 装饰器定义方法，只能在对应的 struct 中使用<br>@Styles<br>方法名(){}</li>
+</ul>
+</li>
+<li>@Extend 装饰器与 @Styles 装饰器功能类似，@Extend 装饰器支持组件的私有属性和私有事件的代码，允许传递参数，且支持在 struct 外定义方法</li>
+<li>@Builder 装饰器：用于装饰一个函数，被装饰的函数被称为自定义构建函数  <ul>
+<li>值传递（复制）  </li>
+<li>引用传递（同一个对象）</li>
+</ul>
+</li>
+</ol>
+<h2 id="页面跳转"><a href="#页面跳转" class="headerlink" title="页面跳转"></a>页面跳转</h2><p>1.<br>2. 页面返回: router.back(options)</p>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><ol>
+<li>属性动画</li>
+</ol>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+                <div class="icon arrow-left"></div>
+                <div class="post-link">
+                    <a href="/2025/08/12/Javase/">Prev</a>
+                </div>
+            
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2025/06/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+    
+
+  </body>
+</html>

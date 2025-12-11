@@ -135,7 +135,8 @@
     </div>
 </div>
     <div class="post-content">
-    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第一部分html超文本标记语言：表单必考<br>第二部分JavaScript弱类型语言：document对象（事件和html5不考）<br>第三部分servlet：配置方法，生命周期，四大作用域，过滤器filter<br>第四部分jsp：三种指令标签，page作用域，request属性范围，session属性范围，了解隐式对象，知道mvc概念，重点掌握其优点（Java bean不考）<br>第五部分jstl：el表达式（jstl不考）<br>第六部分structs2：编写action文件，配置文件structs.xml，如何操作<br>第七部分spring：五个模块（重点ioc，自动生成类，减少函数依赖，aop需要了解但是不考），注解，配置，springmvc掌握工作流程<br>第八部分hibernate：（hibernate和mybatis都是orm，前者不需要sql语句，后者需要熟练使用sql语句）：持久化，orm（把对象和关系进行映射），不需要会用hibernate做项目，要知道宏观概念<br>第九部分mybatis：持久化，如何实现（建库建表，配置文件，映射（要会写映射查询语句））（一对一一对多动态sql不考）<br>第十部分ssm框架：开发步骤（写实体类entity，写mapper.xml，写mapper.java，services.java, controller.java）</p>
+    <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p><a href="#%E5%89%8D%E8%A8%80">前言</a><br><a href="#%E4%B8%80htmlcss">Html&amp;CSS</a><br><a href="#%E4%BA%8Cjavascript">JavaScript</a><br><a href="#%E4%B8%89servlet">Servlet</a><br><a href="#%E5%9B%9Bjsp">JSP</a><br><a href="#%E4%BA%94jstl-%E4%B8%8E-el-%E8%A1%A8%E8%BE%BE%E5%BC%8F">Jstl 和 EL 表达式</a><br><a href="#%E5%85%ADstruts">Struts</a><br><a href="#%E4%B8%83spring">spring</a><br><a href="#%E5%85%ABmybatis">MyBatis</a>  </p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第一部分html超文本标记语言：表单必考<br>第二部分JavaScript弱类型语言：document对象（事件和html5不考）<br>第三部分servlet：配置方法，生命周期，四大作用域，过滤器filter<br>第四部分jsp：三种指令标签，page作用域，request属性范围，session属性范围，了解隐式对象，知道mvc概念，重点掌握其优点（Java bean不考）<br>第五部分jstl：el表达式（jstl不考）<br>第六部分structs2：编写action文件，配置文件structs.xml，如何操作<br>第七部分spring：五个模块（重点ioc，自动生成类，减少函数依赖，aop需要了解但是不考），注解，配置，springmvc掌握工作流程<br>第八部分hibernate：（hibernate和mybatis都是orm，前者不需要sql语句，后者需要熟练使用sql语句）：持久化，orm（把对象和关系进行映射），不需要会用hibernate做项目，要知道宏观概念<br>第九部分mybatis：持久化，如何实现（建库建表，配置文件，映射（要会写映射查询语句））（一对一一对多动态sql不考）<br>第十部分ssm框架：开发步骤（写实体类entity，写mapper.xml，写mapper.java，services.java, controller.java）</p>
 <p>选择题（30分，十五题，每题两分）<br>简答题（30分，六题，每题五分）<br>程序设计（40分，五题，每题8分）（前三题填空题，每题8分，四个空）（第一题是表单，第二题Servlet（数据获取），第三题structs框架，第四题spring（mvc：注解，调用），mybatis（ssm）</p>
 <h1 id="JavaWeb-学习"><a href="#JavaWeb-学习" class="headerlink" title="JavaWeb 学习"></a>JavaWeb 学习</h1><h2 id="一、Html-CSS"><a href="#一、Html-CSS" class="headerlink" title="一、Html&amp;CSS"></a>一、Html&amp;CSS</h2><ol>
 <li>概念：<ol>
@@ -195,7 +196,7 @@
 </li>
 <li>HTML事件：窗口事件、表单元素事件、键盘事件、鼠标事件</li>
 </ol>
-<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><ol>
+<h2 id="二、JavaScript"><a href="#二、JavaScript" class="headerlink" title="二、JavaScript"></a>二、JavaScript</h2><ol>
 <li>概念：  <ol>
 <li>是一种弱类型语言（声明时不确定类型，赋值时才确定类型），基于对象和事件驱动的脚本语言；无需编译，只需解释就可以执行</li>
 <li>引入方式：<ul>
@@ -304,7 +305,7 @@
 </ol>
 </li>
 </ol>
-<h2 id="Servlet"><a href="#Servlet" class="headerlink" title="Servlet"></a>Servlet</h2><ol>
+<h2 id="三、Servlet"><a href="#三、Servlet" class="headerlink" title="三、Servlet"></a>三、Servlet</h2><ol>
 <li>概述：Servlet 是用Java编写的服务器端程序，主要功能在于交互式地浏览和修改数据，生成动态Web内容。<br>广义的 Servlet 是指任何实现了这个 Servlet 接口的类。<br>Servlet 可以获取请求并处理各种复杂的客户端请求,是一个普通的 Java Class，是 JavaWeb 开发中最重要的组件，唯一一个可以用来接收客户端请求，并对请求作出处理的组件，Java Class 要能够被称之为 Servlet，必须继承 javax.servlet.http.HttpServlet</li>
 <li>创建 Servlet 步骤：<ol>
 <li>新建 Java Class 文件，继承 javax.servlet.http.HttpServlet</li>
@@ -315,12 +316,16 @@
 </li>
 </ol>
 </li>
-<li>配置 Servlet：Servlet 配置是为了告诉 Java Web 容器软件（Tomcat），什么类型的请求应该交给哪些Servlet处理，所有Servlet的配置都需要编写在web。xml<ol>
+<li>配置 Servlet：Servlet 配置是为了告诉 Java Web 容器软件（Tomcat），什么类型的请求应该交给哪些Servlet处理，所有Servlet的配置都需要编写在web.xml<ol>
 <li>在 Web.xml 文件配置所有研发完毕的 Servlet 组件: <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;!– 配置Servlet组件，告诉Tomcat Web容器，Servlet组件的名字和位置[全名（类名+包名）]</span><br><span class="line">--&gt;</span><br><span class="line">&lt;servlet&gt;</span><br><span class="line">    &lt;servlet-name&gt;起别名&lt;/servlet-name&gt;</span><br><span class="line">    &lt;servlet-class&gt;servlet类的完整路径&lt;/servlet-class&gt;</span><br><span class="line">&lt;/servlet&gt;</span><br><span class="line">&lt;servlet-mapping&gt;</span><br><span class="line">    &lt;servlet-name&gt;别名&lt;/servlet-name&gt;</span><br><span class="line">    &lt;url-pattern&gt;/别名&lt;/url-pattern&gt;</span><br></pre></td></tr></table></figure></li>
 </ol>
 </li>
-<li>Servlet 容器：Servlet的运行过程与生命周期由 Servlet容器控制</li>
-<li>Servlet 生命周期：<ol>
+<li>Servlet 获取数据：  <ol>
+<li>获取表单数据：   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String name = request.getParameter(&quot;Username&quot;);</span><br></pre></td></tr></table></figure></li>
+<li>服务器内部传值：   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">requestsetAttribute(&quot;msg&quot;,&quot;OK&quot;);</span><br><span class="line">request.getRequestPatcher(&quot;result.jsp&quot;).forward(request,response);//跳转页面</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li>Servlet 生命周期：Servlet的运行过程与生命周期由 Servlet容器控制<ol>
 <li>客户端发送请求后，服务器加载 Servlet</li>
 <li>服务器创建 Servlet 类的实例</li>
 <li>调用 Servlet 实例的 init（）方法</li>
@@ -337,10 +342,10 @@
 <li>destroy()方法：完成所有服务调用后，卸载 Servlet 时调用，释放获得的资源</li>
 </ul>
 </li>
-<li>Servlet 四大作用域<br>作用域：生命周期；用途  <ul>
-<li>pageContext:当前 JSP 页面;Jsp页面内使用  </li>
-<li>request:一次请求内;请求转发传值  </li>
-<li>session:浏览器一次会话内;登录、保存用户信息  </li>
+<li>Servlet 四大作用域<br> 作用域：生命周期；用途    <ul>
+<li>pageContext:当前 JSP 页面;Jsp页面内使用   </li>
+<li>request:一次请求内;请求转发传值   </li>
+<li>session:浏览器一次会话内;登录、保存用户信息   </li>
 <li>application:整个Web应用;全局变量、在线人数等</li>
 </ul>
 </li>
@@ -355,7 +360,7 @@
 </ol>
 </li>
 </ol>
-<h2 id="JSP"><a href="#JSP" class="headerlink" title="JSP"></a>JSP</h2><ol>
+<h2 id="四、JSP"><a href="#四、JSP" class="headerlink" title="四、JSP"></a>四、JSP</h2><ol>
 <li>概述：  <ol>
 <li>JSP 是一种动态网页技术标准，是指在 HTML 网页中嵌入 Java 脚本语言，然后由应用服务器中的 JSP 引擎编译和运行，之后将生成的整个页面返回给客户端</li>
 </ol>
@@ -390,7 +395,7 @@
 </li>
 <li>MVC 模式：MVC 将交互式应用分成 模型(Model)、视图(View)和控制器</li>
 </ol>
-<h2 id="JStl-与-EL-表达式"><a href="#JStl-与-EL-表达式" class="headerlink" title="JStl 与 EL 表达式"></a>JStl 与 EL 表达式</h2><ol>
+<h2 id="五、JStl-与-EL-表达式"><a href="#五、JStl-与-EL-表达式" class="headerlink" title="五、JStl 与 EL 表达式"></a>五、JStl 与 EL 表达式</h2><ol>
 <li>EL 表达式：<ol>
 <li>概述：用于实现 JSP 页面无脚本环境，用于替代表达式脚本，代表一个值，可以用于结果的显示，方便获取指定变量的值的同时，还可以自动类型转换</li>
 <li>基本语法格式：${}  <br> “.”称为点操作符，符号左边可以是对象，也可以是隐式对象，右边可以是对象属性，也可以是映射键<br> 操作数组使用[]，同时所有点操作符可以操作的对象都可以用其代替</li>
@@ -406,7 +411,7 @@
 </ol>
 </li>
 </ol>
-<h2 id="struts"><a href="#struts" class="headerlink" title="struts"></a>struts</h2><ol>
+<h2 id="六、struts"><a href="#六、struts" class="headerlink" title="六、struts"></a>六、struts</h2><ol>
 <li>MVC<ol>
 <li>概念：MVC 是 Model（模型）-View（视图）-Controller（控制器）的缩写，是一种非常经典的软件设计模式</li>
 <li>优点：结构直观，各模块代码按功能实现高效的分离</li>
@@ -421,16 +426,16 @@
 <li>搭建 Struts2开发环境的步骤<ol>
 <li>创建 javaweb 工程</li>
 <li>加入开发 Struts2 应用需要使用到的 jar 文件</li>
-<li>在 web.xml 中加入 Struts MVC 框架启动配置：   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;filter&gt;</span><br><span class="line">    filter-name&gt;StrutsPrepareAndExecuteFilter&lt;/filter-name&gt;</span><br><span class="line">    &lt;filter- class&gt;org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter&lt;/filter-class&gt;</span><br><span class="line">&lt;/filter&gt;</span><br><span class="line">&lt;filter-mapping&gt;</span><br><span class="line">    &lt;filter-name&gt;StrutsPrepareAndExecuteFilter&lt;/filter-name&gt;</span><br><span class="line">    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span><br><span class="line">&lt;/filter-mapping&gt;</span><br></pre></td></tr></table></figure></li>
+<li>在 web.xml 中加入 Struts MVC 框架启动配置：   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;filter&gt;</span><br><span class="line">    filter-name&gt;StrutsPrepareAndExecuteFilter&lt;/filter-name&gt;</span><br><span class="line">    &lt;filter-class&gt;org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter&lt;/filter-class&gt;</span><br><span class="line">&lt;/filter&gt;</span><br><span class="line">&lt;filter-mapping&gt;</span><br><span class="line">    &lt;filter-name&gt;StrutsPrepareAndExecuteFilter&lt;/filter-name&gt;</span><br><span class="line">    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span><br><span class="line">&lt;/filter-mapping&gt;</span><br></pre></td></tr></table></figure></li>
 <li>创建 action 文件 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//一个基本的 action 文件示例，如LoginAction：</span><br><span class="line">public class LoginAction&#123;</span><br><span class="line">    private String username;</span><br><span class="line">    private String password;</span><br><span class="line">    //setter,Struts会自动注入表单获取的值</span><br><span class="line">    public void setUsername(String username)&#123;</span><br><span class="line">        this.username = username;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setPassword(String password)&#123;</span><br><span class="line">        this.password = password;</span><br><span class="line">    &#125;</span><br><span class="line">    //主方法execute，return 的内容与jsp 文件在 struts.xml 中result元素的 name 要一致</span><br><span class="line">    public String execute()&#123;</span><br><span class="line">        if(&quot;admin&quot;.equals(username) &amp;&amp; &quot;123&quot;.equals(password))&#123;</span><br><span class="line">            return &quot;success&quot;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            return &quot;error&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>编写 Struts2 的配置文件 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;struts&gt;</span><br><span class="line">    &lt;!--配置 package 元素：</span><br><span class="line">        name 属性随便取</span><br><span class="line">        namepace自己取但是会决定 url 路径：/项目名/namespace/xx.action；</span><br><span class="line">        extends 固定写struts-default</span><br><span class="line">    --&gt;</span><br><span class="line">    &lt;package name=&quot;primer&quot; namespace=&quot;/primer&quot; extends=&quot;struts-default&quot;&gt;</span><br><span class="line">        &lt;!--配置 action 元素：</span><br><span class="line">            name属性随便取</span><br><span class="line">            class属性填 Action 的完整类名</span><br><span class="line">            method 默认 execute</span><br><span class="line">        --&gt;</span><br><span class="line">        &lt;action name=&quot;helloWorldAction&quot; class=&quot;&quot;&gt;</span><br><span class="line">            &lt;!--配置 result 元素：</span><br><span class="line">                name 属性与 Action 返回值一致</span><br><span class="line">                type默认 dispatcher（JSP 转发） 之间填/要跳转的文件名.jsp    </span><br><span class="line">            --&gt;  </span><br><span class="line">            &lt;result name=&quot;success&quot; type=&quot;dispatcher&gt;/success.jsp&lt;/result&gt;</span><br><span class="line">            &lt;result name=&quot;error&quot; type=&quot;dispatcher&quot;&gt;/error.jsp&lt;/result&gt;</span><br><span class="line">        &lt;/action&gt;</span><br><span class="line">    &lt;/package&gt;</span><br><span class="line">&lt;/struts&gt;</span><br></pre></td></tr></table></figure></li>
+<li>编写 Struts2 的配置文件 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;struts&gt;</span><br><span class="line">    &lt;!--配置 package 元素：</span><br><span class="line">        name 属性随便取</span><br><span class="line">        namepace自己取但是会决定 url 路径：/项目名/namespace/xx.action；</span><br><span class="line">        extends 固定写struts-default</span><br><span class="line">    --&gt;</span><br><span class="line">    &lt;package name=&quot;primer&quot; namespace=&quot;/primer&quot; extends=&quot;struts-default&quot;&gt;</span><br><span class="line">        &lt;!--配置 action 元素：</span><br><span class="line">            name属性随便取</span><br><span class="line">            class属性填 Action 的完整类名</span><br><span class="line">            method 默认 execute</span><br><span class="line">        --&gt;</span><br><span class="line">        &lt;action name=&quot;LoginAction&quot; class=&quot;com.example.LoginAction&quot;</span><br><span class="line">            &lt;!--配置 result 元素：</span><br><span class="line">                name 属性与 Action 返回值一致</span><br><span class="line">                type默认 dispatcher（JSP 转发） 之间填/要跳转的文件名.jsp    </span><br><span class="line">            --&gt;  </span><br><span class="line">            &lt;result name=&quot;success&quot; type=&quot;dispatcher&gt;/success.jsp&lt;/result&gt;</span><br><span class="line">            &lt;result name=&quot;error&quot; type=&quot;dispatcher&quot;&gt;/error.jsp&lt;/result&gt;</span><br><span class="line">        &lt;/action&gt;</span><br><span class="line">    &lt;/package&gt;</span><br><span class="line">&lt;/struts&gt;</span><br></pre></td></tr></table></figure></li>
 <li>创建 jsp 文件</li>
 </ol>
 </li>
 </ol>
 </li>
 </ol>
-<h2 id="spring"><a href="#spring" class="headerlink" title="spring"></a>spring</h2><ol>
+<h2 id="七、spring"><a href="#七、spring" class="headerlink" title="七、spring"></a>七、spring</h2><ol>
 <li>Spring 体系结构<ol>
 <li>Core（核心容器）、Context、AOP（面向切面编程）、DAO（数据库访问层）、Web</li>
 <li>Ioc：“控制反转”，不是一种技术，是一种设计思想，将设计好的对象交给容器控制，而不是传统的在对象内部直接控制   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//UserService service = new UserService();</span><br><span class="line">@Autowired</span><br><span class="line">UserService service;</span><br></pre></td></tr></table></figure></li>
@@ -447,7 +452,7 @@
 </ol>
 </li>
 </ol>
-<h2 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h2><ol>
+<h2 id="八、Mybatis"><a href="#八、Mybatis" class="headerlink" title="八、Mybatis"></a>八、Mybatis</h2><ol>
 <li>持久层：在系统逻辑层上，专注于实现数据持久化的一个相对独立的领域<br>一个完善的持久层：代码的可重用性高，能完成所有数据库的访问操作；支持多种数据库平台‘具有相对独立性。持久层的实现发生变化时，不影响上层的实现  </li>
 <li>持久化：<br>狭义：指将域对象永久保存至数据库<br>广义：包括与数据库相关的各种操作<br>（保存：将域对象永久保存至数据库中；<br>更新：更新数据库中域对象的状态；<br>删除：从数据库中删除一个域对象；<br>加载：根据特定OID，将一个域对象从数据库加载至内存；<br>查询：根据特定的查询条件，将符合查询条件的一个或多个域对象从数据库加载至内存）   </li>
 <li>概念：MyBatis 是一个数据持久层（ORM）框架。把尸体类和 SQL 语句之间建立了映射关系，是一种半自动化的 ORM 实现。</li>

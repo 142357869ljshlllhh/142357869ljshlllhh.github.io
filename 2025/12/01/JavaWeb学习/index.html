@@ -138,7 +138,7 @@
     <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p><a href="#%E5%89%8D%E8%A8%80">前言</a><br><a href="#1">Html&amp;CSS</a><br><a href="#2">JavaScript</a><br><a href="#3">Servlet</a><br><a href="#4">JSP</a><br><a href="#5">Jstl 和 EL 表达式</a><br><a href="#6">Struts</a><br><a href="#7">spring</a><br><a href="#8">MyBatis</a>  </p>
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第一部分html超文本标记语言：表单必考<br>第二部分JavaScript弱类型语言：document对象（事件和html5不考）<br>第三部分servlet：配置方法，生命周期，四大作用域，过滤器filter<br>第四部分jsp：三种指令标签，page作用域，request属性范围，session属性范围，了解隐式对象，知道mvc概念，重点掌握其优点（Java bean不考）<br>第五部分jstl：el表达式（jstl不考）<br>第六部分structs2：编写action文件，配置文件structs.xml，如何操作<br>第七部分spring：五个模块（重点ioc，自动生成类，减少函数依赖，aop需要了解但是不考），注解，配置，springmvc掌握工作流程<br>第八部分hibernate：（hibernate和mybatis都是orm，前者不需要sql语句，后者需要熟练使用sql语句）：持久化，orm（把对象和关系进行映射），不需要会用hibernate做项目，要知道宏观概念<br>第九部分mybatis：持久化，如何实现（建库建表，配置文件，映射（要会写映射查询语句））（一对一一对多动态sql不考）<br>第十部分ssm框架：开发步骤（写实体类entity，写mapper.xml，写mapper.java，services.java, controller.java）</p>
 <p>选择题（30分，十五题，每题两分）<br>简答题（30分，六题，每题五分）<br>程序设计（40分，五题，每题8分）（前三题填空题，每题8分，四个空）（第一题是表单，第二题Servlet（数据获取），第三题structs框架，第四题spring（mvc：注解，调用），mybatis（ssm）</p>
-<h1 id="JavaWeb-学习"><a href="#JavaWeb-学习" class="headerlink" title="JavaWeb 学习"></a>JavaWeb 学习</h1><h2 id="一、Html-CSS"><a href="#一、Html-CSS" class="headerlink" title="一、Html&amp;CSS"></a>一、Html&amp;CSS<span id="1"></span></h2><ol>
+<h1 id="JavaWeb-学习"><a href="#JavaWeb-学习" class="headerlink" title="JavaWeb 学习"></a>JavaWeb 学习</h1><h2 id="一、Html-CSS-nomarkdown"><a href="#一、Html-CSS-nomarkdown" class="headerlink" title="一、Html&amp;CSS{::nomarkdown}{:&#x2F;}"></a>一、Html&amp;CSS{::nomarkdown}<a id="1"></a>{:&#x2F;}</h2><ol>
 <li>概念：<ol>
 <li>超文本标记语言（本身是文字，呈现出来的最终效果超越了文本；由标签组成，每个标签有其固定的含义和确定的页面展示效果）<br> 不是编程语言，而是一种标记语言</li>
 <li>专业词汇：<br> 标签：(tag)：由尖括号包围的关键词<br> 属性：(attribute)对标签特征进行设置的一种方式<br> 文本：(text)双标签中的文字<br> 元素：(element)开始标签+文本+结束标签</li>
@@ -196,7 +196,7 @@
 </li>
 <li>HTML事件：窗口事件、表单元素事件、键盘事件、鼠标事件</li>
 </ol>
-<h2 id="二、JavaScript"><a href="#二、JavaScript" class="headerlink" title="二、JavaScript"></a>二、JavaScript<span id="2"></span></h2><ol>
+<h2 id="二、JavaScript-nomarkdown"><a href="#二、JavaScript-nomarkdown" class="headerlink" title="二、JavaScript{::nomarkdown}{:&#x2F;}"></a>二、JavaScript{::nomarkdown}<a id="2"></a>{:&#x2F;}</h2><ol>
 <li>概念：  <ol>
 <li>是一种弱类型语言（声明时不确定类型，赋值时才确定类型），基于对象和事件驱动的脚本语言；无需编译，只需解释就可以执行</li>
 <li>引入方式：<ul>
@@ -305,7 +305,7 @@
 </ol>
 </li>
 </ol>
-<h2 id="三、Servlet"><a href="#三、Servlet" class="headerlink" title="三、Servlet"></a>三、Servlet<span id="3"></span></h2><ol>
+<h2 id="三、Servlet-nomarkdown"><a href="#三、Servlet-nomarkdown" class="headerlink" title="三、Servlet{::nomarkdown}{:&#x2F;}"></a>三、Servlet{::nomarkdown}<a id="3"></a>{:&#x2F;}</h2><ol>
 <li>概述：Servlet 是用Java编写的服务器端程序，主要功能在于交互式地浏览和修改数据，生成动态Web内容。<br>广义的 Servlet 是指任何实现了这个 Servlet 接口的类。<br>Servlet 可以获取请求并处理各种复杂的客户端请求,是一个普通的 Java Class，是 JavaWeb 开发中最重要的组件，唯一一个可以用来接收客户端请求，并对请求作出处理的组件，Java Class 要能够被称之为 Servlet，必须继承 javax.servlet.http.HttpServlet</li>
 <li>创建 Servlet 步骤：<ol>
 <li>新建 Java Class 文件，继承 javax.servlet.http.HttpServlet</li>
@@ -360,7 +360,7 @@
 </ol>
 </li>
 </ol>
-<h2 id="四、JSP"><a href="#四、JSP" class="headerlink" title="四、JSP"></a>四、JSP<span id="4"></span></h2><ol>
+<h2 id="四、JSP-nomarkdown"><a href="#四、JSP-nomarkdown" class="headerlink" title="四、JSP{::nomarkdown}{:&#x2F;}"></a>四、JSP{::nomarkdown}<a id="4"></a>{:&#x2F;}</h2><ol>
 <li>概述：  <ol>
 <li>JSP 是一种动态网页技术标准，是指在 HTML 网页中嵌入 Java 脚本语言，然后由应用服务器中的 JSP 引擎编译和运行，之后将生成的整个页面返回给客户端</li>
 </ol>
@@ -395,7 +395,7 @@
 </li>
 <li>MVC 模式：MVC 将交互式应用分成 模型(Model)、视图(View)和控制器</li>
 </ol>
-<h2 id="五、JStl-与-EL-表达式"><a href="#五、JStl-与-EL-表达式" class="headerlink" title="五、JStl 与 EL 表达式"></a>五、JStl 与 EL 表达式<span id="5"></span></h2><ol>
+<h2 id="五、JStl-与-EL-表达式-nomarkdown"><a href="#五、JStl-与-EL-表达式-nomarkdown" class="headerlink" title="五、JStl 与 EL 表达式{::nomarkdown}{:&#x2F;}"></a>五、JStl 与 EL 表达式{::nomarkdown}<a id="5"></a>{:&#x2F;}</h2><ol>
 <li>EL 表达式：<ol>
 <li>概述：用于实现 JSP 页面无脚本环境，用于替代表达式脚本，代表一个值，可以用于结果的显示，方便获取指定变量的值的同时，还可以自动类型转换</li>
 <li>基本语法格式：${}  <br> “.”称为点操作符，符号左边可以是对象，也可以是隐式对象，右边可以是对象属性，也可以是映射键<br> 操作数组使用[]，同时所有点操作符可以操作的对象都可以用其代替</li>
@@ -411,7 +411,7 @@
 </ol>
 </li>
 </ol>
-<h2 id="六、struts"><a href="#六、struts" class="headerlink" title="六、struts"></a>六、struts<span id="6"></span></h2><ol>
+<h2 id="六、Struts-nomarkdown"><a href="#六、Struts-nomarkdown" class="headerlink" title="六、Struts{::nomarkdown}{:&#x2F;}"></a>六、Struts{::nomarkdown}<a id="6"></a>{:&#x2F;}</h2><ol>
 <li>MVC<ol>
 <li>概念：MVC 是 Model（模型）-View（视图）-Controller（控制器）的缩写，是一种非常经典的软件设计模式</li>
 <li>优点：结构直观，各模块代码按功能实现高效的分离</li>
@@ -435,7 +435,7 @@
 </ol>
 </li>
 </ol>
-<h2 id="七、spring"><a href="#七、spring" class="headerlink" title="七、spring"></a>七、spring<span id="7"></span></h2><ol>
+<h2 id="七、Spring-nomarkdown"><a href="#七、Spring-nomarkdown" class="headerlink" title="七、Spring{::nomarkdown}{:&#x2F;}"></a>七、Spring{::nomarkdown}<a id="7"></a>{:&#x2F;}</h2><ol>
 <li>Spring 体系结构<ol>
 <li>Core（核心容器）、Context、AOP（面向切面编程）、DAO（数据库访问层）、Web</li>
 <li>Ioc：“控制反转”，不是一种技术，是一种设计思想，将设计好的对象交给容器控制，而不是传统的在对象内部直接控制   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//UserService service = new UserService();</span><br><span class="line">@Autowired</span><br><span class="line">UserService service;</span><br></pre></td></tr></table></figure></li>
@@ -452,7 +452,7 @@
 </ol>
 </li>
 </ol>
-<h2 id="八、Mybatis"><a href="#八、Mybatis" class="headerlink" title="八、Mybatis"></a>八、Mybatis<span id="8"></span></h2><ol>
+<h2 id="八、Mybatis-nomarkdown"><a href="#八、Mybatis-nomarkdown" class="headerlink" title="八、Mybatis{::nomarkdown}{:&#x2F;}"></a>八、Mybatis{::nomarkdown}<a id="8"></a>{:&#x2F;}</h2><ol>
 <li>持久层：在系统逻辑层上，专注于实现数据持久化的一个相对独立的领域<br>一个完善的持久层：代码的可重用性高，能完成所有数据库的访问操作；支持多种数据库平台‘具有相对独立性。持久层的实现发生变化时，不影响上层的实现  </li>
 <li>持久化：<br>狭义：指将域对象永久保存至数据库<br>广义：包括与数据库相关的各种操作<br>（保存：将域对象永久保存至数据库中；<br>更新：更新数据库中域对象的状态；<br>删除：从数据库中删除一个域对象；<br>加载：根据特定OID，将一个域对象从数据库加载至内存；<br>查询：根据特定的查询条件，将符合查询条件的一个或多个域对象从数据库加载至内存）   </li>
 <li>概念：MyBatis 是一个数据持久层（ORM）框架。把尸体类和 SQL 语句之间建立了映射关系，是一种半自动化的 ORM 实现。</li>

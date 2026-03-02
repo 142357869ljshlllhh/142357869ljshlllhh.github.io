@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="John Doe">
+
+
+
+
+
+
+
+<title>Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Frame.
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/categories/gallery/">Gallery</a>
+              </li> 
+                   
+          
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+        </div>
+        <div class="post-title">
+            
+            
+                *Untitled
+            
+            
+        </div>
+        <span class="post-date">
+            Feb 26, 2026
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <h1 id="一、基础"><a href="#一、基础" class="headerlink" title="一、基础"></a>一、基础</h1><h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1 概述"></a>1 概述</h2><ol>
+<li><p>数据库相关概念：<br>数据库 DataBase（DB）：存放数据的仓库<br>数据库管理系统 DataBase Management System（DBMS）：操纵和管理数据库的大型软件<br>SQL：操作关系型数据库的编程语言，定义了一套操作关系型数据库统一标准</p>
+</li>
+<li><p>启动与停止：<br>启动：net start mysql80<br>停止：net stop mysql80  </p>
+</li>
+<li><p>客户端连接：mysql -u root -p 密码  </p>
+</li>
+<li><p>数据模型：<br><strong>关系型数据库：</strong><br>建立在关系模型基础上，由多张相互连接的二维表组成的数据库<br><strong>MySQL数据模型：</strong><br>客户端-&gt;DBMS-&gt;多个数据库-&gt;多个二维表</p>
+</li>
+</ol>
+<h2 id="2-SQL"><a href="#2-SQL" class="headerlink" title="2 SQL"></a>2 SQL</h2><ol>
+<li><p>SQL 通用语法<br><strong>注释：</strong><br>单行注释：–注释内容 或者 #注释内容<br>多行注释：&#x2F;<em>注释内容</em>&#x2F;</p>
+</li>
+<li><p>SQL 语句分类<br>DDL 数据定义语言:用来定义数据库对象<br>DML 数据操作语言：用来对数据库表中数据进行增删改<br>DQL 数据查询语言：用来查询数据库中表的记录<br>DCL 数据控制语言：用来创建数据库用户、控制数据库的访问权限  </p>
+</li>
+<li><p>DDL<br><strong>数据库操作：</strong><br>查询所有数据库：SHOW DATABASES;<br>查询当前数据库：SELECT DATABASE();<br>创建：CREATE DATABASE [IF NOT EXISTS] 数据库名 [DEFAULT CHARSET 字符集] [COLLATE 排序规则];<br>删除：DROP DATABASE [IF EXISTS] 数据库名;<br>使用：USE 数据库名;<br><strong>表操作：查询</strong><br>查询当前数据库所有表： show tables;<br>查询表结构： desc 表名;<br>查询指定表的建表语句：show create table 表名;<br><strong>表操作：创建</strong><br>创建表:</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">create table 表名(  </span><br><span class="line">    字段1 字段1类型[comment 字段1注释],  </span><br><span class="line">    字段n 字段n类型[commnet 字段n释]  </span><br><span class="line">)[comment 表注释];  </span><br></pre></td></tr></table></figure>
+
+<p> <strong>表操作：修改</strong><br> 添加字段：</p>
+</li>
+</ol>
+<p>alter table 表名 add 字段名 类型(长度)  [commnet 注释] [约束];<br>修改数据类型<br>alter table 表名 modify 字段名 新数据类型(长度);<br>修改字段名和字段类型：<br>alter table 表名 change 旧字段名新字段名 类型(长度) [commnent 注释] [约束];<br>删除字段：<br>alter table 表名 drop 字段名;<br>修改表名：<br>alter table 表名 rename to 新表名;<br><strong>表操作：删除</strong><br>删除表：<br>drop table [if exists] 表名;<br>删除指定表并重新创建该表:<br>truncate table 表名;<br><strong>数据类型</strong><br>无符号：signed；有符号：unsigned<br>TINYINT:1 byte<br>SMALLINT：2 bytes<br>MEDIUMINT: 3 bytes<br>INT&#x2F;INTEGER:4 bytes<br>BIGINT:8 bytes<br>FLOAT:4 bytes<br>DOUBLE:8 bytes<br>CHAR:0-255 bytes 定长字符串（一字符也空格填充占满） 性能好<br>VARCHAR:0-65535 bytes 变长字符串 性能较差<br>DATE 3 YYYY-MM-DD 日期值<br>TIME 3 HH:MM:SS 日期值或持续时间<br>YEAR 1 YYYY 年份<br>DATETIME 8 YYYY-MM-DD HH:MM:SS 混合日期和时间值<br>TIMESTAMP 4 YYYY-MM-DD HH:MM:SS 混合日期和时间值，时间戳  </p>
+<ol start="4">
+<li><p>DML<br>给指定字段添加数据：<br>insert into 表名(字段名1,字段名2,…) values(值1,值2,…);<br>给全部字段添加数据：<br>insert into 表名 values(值1,值2,…);<br>批量添加数据：<br>insert into 表名(字段名1,字段名2,…) values(值1,值2,…),(值1,值2,…),…;<br>insert into 表名 values(值1,值2,…),(值1,值2,…),…;<br>修改数据：<br>update 表名 set 字段名1&#x3D;值1,字段名2&#x3D;值2,… [while 条件];<br>删除数据：<br>delete from 表名 [while 条件];(没有条件则删除表中所有数据)   </p>
+</li>
+<li><p>DQL<br><strong>单表查询语法</strong><br>select 字段列表 from 表名列表 where 条件列表 group by 分组字段列表 having 分组后条件列表 order by 排序字段列表 limit 分页参数;<br><strong>基本查询</strong><br>查询多个字段：<br>select 字段1,字段2，字段3,… from 表名;<br>select * from 表名;<br>设置别名：<br>select 字段1 [as 别名1],字段2 [as 别名2] … from 表名;<br>去除重复记录：<br>select distinct 字段列表 from 表名;<br><strong>条件查询</strong><br>语法：<br>select 字段列表 from 表名 where 条件列表;<br>条件：<br>比较运算符：  &gt;, &gt;&#x3D;, &lt;, &lt;&#x3D;, &#x3D;, &lt;&gt; 或 !&#x3D;,<br>between … and …<br>in(…)<br>like 占位符（模糊匹配，_匹配单个字符，%匹配任意个字符）<br>is null<br>逻辑运算符：and 或 &amp;&amp;, or 或 ||, not 或 !<br><strong>聚合函数</strong><br>将一列数据作为一个整体，进行纵向计算<br>常见聚合函数：count, min, manx, avg, sum<br>语法：<br>select 聚合函数(字段列表) from 表名;<br><strong>分组查询</strong><br>语法：<br>select 字段列表 from 表名 [where 条件] group by 分组字段名 [having 分组后过滤条件];<br>where 是分组之前过滤，不满足 where 条件的不参与分组；having 是分组之后对结果进行过滤<br><strong>排序查询</strong><br>语法：<br>select 字段列表 from 表名 order by 字段1 排序方式,字段2 排序方式2;<br>排序方式：asc（升序，默认值）；desc（降序）<br><strong>分页查询</strong><br>语法：<br>select 字段列表 from 表名 limit 起始索引,查询记录数;(起始索引&#x3D;（页码-1）*查询记录数)<br><strong>执行顺序</strong><br>from -&gt; where -&gt; group by -&gt; having -&gt; select -&gt; order by -&gt; limit    </p>
+</li>
+<li><p>DCL<br><strong>管理用户</strong><br>查询用户：<br>use mysql;<br>select * from user;<br>创建用户：<br>create user ‘用户名‘@’主机名’ identified by ‘密码’;<br>修改用户密码：<br>alter user ‘用户名‘@’主机名’ identified with mysql_native_password by ‘新密码’;<br>删除用户：<br>drop user ‘用户名‘@’主机名’;<br><strong>权限控制</strong><br>MySQL中的权限：<br>all,all privileges：所有权限<br>select：查询数据<br>insert：插入数据<br>update：修改数据<br>delete：删除数据<br>alter：修改表<br>drop：删除数据库&#x2F;表&#x2F;视图<br>create：创建数据库&#x2F;表<br>查询权限：<br>show grants for ‘用户名‘@’主机名’;<br>授予权限：<br>grant 权限列表 on 数据库名.表名 to ‘用户名‘@’主机名’;<br>撤销权限：<br>remove 权限列表 on 数据库名.表名 from ‘用户名‘@’主机名’;</p>
+</li>
+</ol>
+<h2 id="3-函数"><a href="#3-函数" class="headerlink" title="3 函数"></a>3 函数</h2><p>函数是指一段可以直接被另一段程序调用的程序或代码  </p>
+<ol>
+<li><p>字符串函数<br>concat(s1,s2,…sn) 字符串拼接，将s1，s2,…四年、拼接成一个字符串<br>lower(str) 将字符串 str 全部转为小写<br>upper(str) 将字符串 str 全部转为大写<br>lpad(str,n,pad) 左填充，用字符串 pad 对 str 的左边进行填充，达到 n 个字符串长度<br>rpad(str,n,pad) 右填充<br>trim(str) 去掉字符串头部和尾部的空格<br>substring(str,start,len) 返回字符串 str 从 start 位置起的 len 个长度的字符串  </p>
+</li>
+<li><p>数值函数<br>ceil(x) 向上取整<br>floor(x) 向下取整<br>mod(x,y) 返回 x&#x2F;y 的模(取余)<br>rand() 返回0-1的随机数<br>round(x,y) 求参数 x 的四舍五入值，保留 y 位小数<br>生成六位随机验证码：<br>select lpad(round(rand()*1000000,0),6,’0’);</p>
+</li>
+<li><p>日期函数：<br>curdate() 返回当前日期<br>curtime() 返回当前时间<br>now() 返回当前日期和时间<br>year(date) 获取指定 date 的年份<br>month(date) 获取指定 date 的月份<br>day(date) 获取指定date 的日期<br>date_add(date,interval expr type) 返回一个日期&#x2F;时间值加上一个时间间隔 expr 后的时间值<br>datediff(date1,date2) 返回起始时间 date1 和结束时间 date2 之间的天数  </p>
+</li>
+<li><p>流程函数<br>if(value,t,f)<br>如果 value 为 true，则返回 t，否则返回 f<br>ifnull(value1,value2)<br>如果 value1 不为空，返回 value1，否则返回 value2<br>case when [val1] then [res1]…else [default] end<br>如果 val 为 true，返回 res1，否则返回 default 默认值<br>case [expr] when [val1] then [res1] …else [default] end<br>如果 expr 的值等于 val1，返回  res1，… 否则返回 default 默认值</p>
+</li>
+</ol>
+<h2 id="4-约束"><a href="#4-约束" class="headerlink" title="4 约束"></a>4 约束</h2><ol>
+<li><p>概述：<br>约束是作用于表上的规则，用于限制存储在中的数据（为了保证数据库中的数据的正确、有效性和完整性）  </p>
+</li>
+<li><p>分类<br>非空约束：not null<br>唯一约束：unique<br>主键约束：primary key<br>默认约束：default（未指定该字段的值，则采用默认值）<br>检查约束：check（保证字段值满足一个条件）<br>外键约束：foreign key<br>约束关键字：<br>主键：primary key<br>自动增长：auto_increment<br>非空：not null<br>唯一：unique<br>默认值：default<br>满足条件：check  </p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">create table user(</span><br><span class="line">    id int primary key auto_increment comment &#x27;主键&#x27;,</span><br><span class="line">    name varchar(10) not null unique comment &#x27;姓名&#x27;,</span><br><span class="line">    age int check(age&gt;0 &amp;&amp; age &lt;=120) comment &#x27;年龄&#x27;,</span><br><span class="line">    status char(1) default &#x27;1&#x27; comment &#x27;状态&#x27;,</span><br><span class="line">    gender char(1) comment &#x27;性别&#x27;</span><br><span class="line">)comment &#x27;用户表&#x27;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>外键约束<br>语法：<br>添加外键：  </p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">create table 表名(</span><br><span class="line">    字段名 数据类型,</span><br><span class="line">    ...</span><br><span class="line">    [constraint] [外键名称] foreign key(外键字段名) references 主表(主表列名)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p> alter table 表名 add constraint 外键名称 foreign key(外键字段名) references 主表(主表列名);</p>
+</li>
+<li><p>外键删除更新行为<br>no action ：当在父表中删除&#x2F;更新对应记录时，首先检查该记录是否有对应外键，如果有则不允许删除&#x2F;更新（与restrict一致）<br>restrict<br>cascade：如果有，则也删除&#x2F;更新外键所在子表中的记录<br>set null：如果有则设置子表中该外键值为 null（要求外键允许 null ）<br>set default：父表有更新时，子表将外键设置成一个默认的值<br>语法：<br>alter table 表名 add constraint 外键名称 foreign key(外键字段) references 主表名(主表字段名) on update 行为 on delete 行为;</p>
+</li>
+</ol>
+<h2 id="5-多表查询"><a href="#5-多表查询" class="headerlink" title="5 多表查询"></a>5 多表查询</h2><ol>
+<li><p>多表关系：<br>一对多（多对一）：在多的一方建立外键，指向一的一方的主键<br>多对多：建立第三方中间表，中间表至少包含两个外键，分别关联两方主键<br>一对一：多用于单表拆分，将一张表的基础字段放在一张表中，其他字段放在另一张表中，以提升操作效率<br>在任意一方加入外键，关联另外一方的主键，并且设置外键为唯一的  </p>
+</li>
+<li><p>多表查询<br><strong>概述</strong><br>笛卡尔积：两个集合的所有组合情况，在多表查询中，需要消除无效的笛卡尔积<br>分类：<br>连接查询：内连接（相当于查询交集部分数据）、外连接：左外连接（查询左边全部数据，以及两张表交集部分数据）、右外连接（查询右表所有数据，以及两张表交集部分数据）、组链接（当前表与自身的连接查询，自连接必须使用表别名）<br>子查询<br><strong>内连接</strong><br>语法：<br>隐式内连接：<br>select 字段列表 from 表1 [别名1],表2 [别名2] where 条件…;<br>显示内连接：<br>select 字段列表 from 表1 [别名1] [inner] join 表2 [别名2] on 连接条件<br>隐式：先做笛卡尔积再过滤；显示：先匹配链接条件再返回，显示性能更优，复杂度更低<br><strong>外连接</strong><br>语法：<br>左外连接：<br>select 字段列表 from 表1 left [outer] join 表2 on 条件…;<br>右外连接：<br>select 字段列表 from 表1 right [outer] join 表2 on 条件…;<br><strong>自连接</strong><br>语法：<br>select 字段列表 from 表1 别名1 join 表1 别名2 on 条件…;<br>自连接查询可以是内连接查询也可以是外连接查询<br><strong>联合查询-union,union all</strong><br>对于 union 查询，就是把多次查询的结果合并起开，形成一个新的查询结果集<br>select 字段列表 fron 表a … union [all] select 字段列表 from 表b …;<br>select 字段列表 fron 表a … union select 字段列表 from 表b …;(合并后去重)<br><em>对于联合查询的多张表的列数必须保持一致，字段类型也需要保持一致</em><br><em>union all将全部数据直接合并在一起，union会对合并后的数据去重</em><br><strong>子查询</strong><br>概念：SQL 语句中嵌套 select 语句，称为嵌套查询，又称子查询<br>子查询外部的语句可以是 insert、update、delete、select 的任何一个<br>根据子查询结果不同，分为：<br>标量子查询：子查询结果为单个值<br>列子查询：子查询结果为一列<br>行子查询：子查询结果为一行<br>表子查询：子查询结果为多行多列<br>根据子查询位置，分为：where 之后、fron 之后、select 之后<br>标量子查询：</p>
+</li>
+</ol>
+<h2 id="6-索引"><a href="#6-索引" class="headerlink" title="6 索引"></a>6 索引</h2>
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+                <div class="icon arrow-left"></div>
+                <div class="post-link">
+                    <a href="/2026/02/27/JavaWeb/">Prev</a>
+                </div>
+            
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2026/01/29/java%E5%9F%BA%E7%A1%80/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+    
+
+  </body>
+</html>

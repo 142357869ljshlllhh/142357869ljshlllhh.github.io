@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="John Doe">
+
+
+
+
+
+
+
+<title>Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Frame.
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/categories/gallery/">Gallery</a>
+              </li> 
+                   
+          
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+        </div>
+        <div class="post-title">
+            
+            
+                *Untitled
+            
+            
+        </div>
+        <span class="post-date">
+            Jan 29, 2026
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>初次尝试改变做笔记的风格，之前的太详细拖沓，主次不分明，现在我希望能做出对自己实用的笔记</p>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>一、基础知识  </p>
+<ol>
+<li>java 执行流程</li>
+<li>注意事项</li>
+<li>转义字符</li>
+<li>注释<br>一、基础语法  </li>
+<li>输入 Scanner  </li>
+<li>for-Each  </li>
+<li>while  </li>
+<li>swtich  </li>
+<li>集合<br>二、面向对象核心  </li>
+<li>类与对象</li>
+</ol>
+<h1 id="一、基础知识"><a href="#一、基础知识" class="headerlink" title="一、基础知识"></a>一、基础知识</h1><ol>
+<li><p>java 执行流程：<br>.java 源文件-&gt;(javac编译)：.class 字节码文件-&gt;(java运行)：结果  </p>
+</li>
+<li><p>注意事项：<br>一个源文件最多只能有一个 public 类，源文件必须以该类名命名；其他类个数不限，也可以将 main 方法写在非 public 类中然后指定运行非 public 类，这样入口方法就是非 public 的 main 方法 </p>
+</li>
+<li><p>转义字符<br>\t：制表符<br>\n：换行符<br>\r：回车</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(&quot;韩顺平教育\r北京&quot;);  \\输出：北京平教育</span><br><span class="line">```  </span><br><span class="line">\\\:一个\    </span><br><span class="line">\\&quot;：一个&quot;  </span><br><span class="line">\\&#x27;：一个&#x27;   </span><br><span class="line"></span><br><span class="line">4. 注释：</span><br><span class="line">    1. 单行注释：\\\</span><br><span class="line">    2. 多行注释：\\* *\</span><br><span class="line">    3. 文档注释</span><br><span class="line"># 二、基础语法</span><br><span class="line">1. 基本数据类型</span><br><span class="line">1. 输入 Scanner  </span><br><span class="line">**键盘读取用户输入**</span><br></pre></td></tr></table></figure>
+<p>&#x2F;&#x2F;输入<br>import java.util.Scanner;<br>Scanner sc &#x3D; new Scanner(System.in);<br>String number &#x3D; sc.nextLine();<br>int age &#x3D; sc.nextInt();</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*nextInt()后面加nextLine()要注意换行符问题，因为 nextInt()不吸收换行符，残留在输入缓冲区，所以nextInt()后如果还有输入加个 sc.nextLine()*  </span><br><span class="line"></span><br><span class="line">2. for-Each  </span><br><span class="line">**用于遍历集合和数组，只遍历，不需要下标时使用**</span><br></pre></td></tr></table></figure>
+<p>&#x2F;&#x2F;for(元素类型 名称:集合名&#x2F;数组名等)<br>for(Student student :list){<br> student.printInformation();<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. while  </span><br><span class="line">循环菜单程序结构（小系统核心）:    </span><br></pre></td></tr></table></figure>
+<p>boolean running &#x3D; true;&#x2F;&#x2F;通过修改 running 退出<br>while(running){<br> &#x2F;&#x2F;显示菜单<br> &#x2F;&#x2F;用户输入选择<br> &#x2F;&#x2F;switch<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4. swtich  </span><br><span class="line">根据输入执行不同功能  </span><br></pre></td></tr></table></figure>
+<p>swtich(choice){<br> case 1:{<br> break;<br> }<br> case 2:{<br> nreak;<br> }<br>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*每个 case 后必须加入 break，否则会发生 case 穿透*</span><br><span class="line"></span><br><span class="line">5. 集合  </span><br><span class="line">    1. 查找：遍历集合，用.equals()比较字符串  </span><br><span class="line">    2. 删除：普通 for 循环，通过下标来删除</span><br><span class="line">    3. 排序：  </span><br></pre></td></tr></table></figure>
+<p> Collectios.sort(list,(s1,s2)-&gt;s1.getAge() - s2.getAge());</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 三、面向对象核心</span><br><span class="line">1. 类与对象  </span><br><span class="line">    1. 类与对象</span><br><span class="line">    2. 构造方法</span><br></pre></td></tr></table></figure>
+<p> puclic Student(String number,String name, int age){<br> this.number &#x3D; number;<br> this.name &#x3D; name;<br> this.age &#x3D; age;<br> }</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3. setter、getter（getter return值）</span><br><span class="line">4. ArrayList（专门装对象的集合，有下标，本质上动态数组）  </span><br><span class="line">**不确定元素个数，需要频繁删减的场景**</span><br></pre></td></tr></table></figure>
+<p> &#x2F;&#x2F; 创建 ArrayList：list<br> ArrayList<Student> list &#x3D; new ArrayList&lt;&gt;();<br> &#x2F;&#x2F;添加<br> list.add(student01);<br> &#x2F;&#x2F;取出<br> Student student02 &#x3D; list.get(student01);<br> &#x2F;&#x2F;删除<br> list.remove();</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">    *存进集合的不是变量名。而是对象的地址（引用）*</span><br><span class="line"># 四、异常处理</span><br></pre></td></tr></table></figure>
+<p>try{</p>
+</li>
+</ol>
+<p>}catch(Exception e){</p>
+<p>}finally{</p>
+<p>}</p>
+<pre><code># 五 集合  
+1. 集合框架体系：  
+集合主要是两组（单列集合、双列集合）  
+Collection 接口有两个重要子接口 List、Set，他们的实现子类都是单列集合  
+Map 接口的实现子列是双列集合，存放 k-v
+**单列集合**    
+Collection：List、Set  
+List：ArrayList、Vector、LinkedList  
+Set：HashSet、TreeSet  
+**双列集合**  
+Map：HashMap、HashTable、TreeMap   
+HashTable：Properties  
+HashMap:LinkedHashMap  
+</code></pre>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+                <div class="icon arrow-left"></div>
+                <div class="post-link">
+                    <a href="/2026/02/26/MySQL/">Prev</a>
+                </div>
+            
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2026/01/24/spring6/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+    
+
+  </body>
+</html>

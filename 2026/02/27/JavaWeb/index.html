@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="John Doe">
+
+
+
+
+
+
+
+<title>Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Frame.
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/categories/gallery/">Gallery</a>
+              </li> 
+                   
+          
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+        </div>
+        <div class="post-title">
+            
+            
+                *Untitled
+            
+            
+        </div>
+        <span class="post-date">
+            Feb 27, 2026
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <h1 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h1><h2 id="数据库连接池"><a href="#数据库连接池" class="headerlink" title="数据库连接池"></a>数据库连接池</h2><ol>
+<li>概念<br>数据库连接池是个容器，负责分配、管理数据库连接<br>它允许应用程序使用一个现有的数据库连接，而不是再建立一个<br>释放空闲时间超过最大空闲时间的连接，来避免因为没有释放连接而引起的数据库连接遗漏</li>
+<li>实现<br>标准接口：DataSource<br>官方提供的数据库连接池接口，由第三方组织实现此接口<br>常见产品：C3P0,DBCP,Druid,Hikari(springboot默认)</li>
+</ol>
+<h2 id="增删改查"><a href="#增删改查" class="headerlink" title="增删改查"></a>增删改查</h2><ol>
+<li><p>delete<br>Mapper接口：<br>@Delete(“delete from user where id &#x3D; #{id}”)<br>public void deleteById(Integer id);  </p>
+</li>
+<li><p>Mybatis 中的 # 和 $</p>
+</li>
+</ol>
+<p>#{…} 占位符 执行时，会将#{…} 替换为?，生成预编译 SQL  用于参数值传递 安全，性能高<br>${…} 拼接符 直接将参数拼接再 SQL 语句中，存在 SQL 注入问题  用于表名、字段名动态设置时使用 不安全、性能低   </p>
+<ol start="3">
+<li><p>insert<br>Mapper接口：<br>@Insert(“insert into user(username,password,name,age) values(#{username},#{password},#{name},#{age})”)<br>public void insert(User user);  </p>
+</li>
+<li><p>update<br>Mapper接口：<br>@Update(“update user set username &#x3D; #{username},password &#x3D; #{password},name &#x3D; #{name},age &#x3D; #{age} where id &#x3D; #{id})<br>public void update(User user);</p>
+</li>
+<li><p>select<br>Mapper接口：<br>@Select(“select * from user where username &#x3D; #{username} and password &#x3D; #{password}”)<br>public User fingbyUsernameAndPaswword(@Param(“username”) String username,@Param(“password”) String password);<br>@Param 注解的作用是为接口的方法形参起名字<br>说明：基于官方骨架创建的 springboot 项目中，接口编译时会保留方法形参名，@Param 注解可以省略</p>
+</li>
+</ol>
+<h2 id="springboot-项目配置文件"><a href="#springboot-项目配置文件" class="headerlink" title="springboot 项目配置文件"></a>springboot 项目配置文件</h2><p>yml 配置文件：<br><strong>格式</strong><br>1 数值前边必须有空格，作为分隔符<br>2 使用缩进表示层级关系，缩进时，不允许使用 Tab 键，只能用空格（idea 中会自动将 Tab 转化为空格）<br>3 缩进的空格数目不重要，只要相同层级的元素左侧对齐即可<br>4 # 表示注释，从这个字符一直到行尾，都会被解析器忽略<br><strong>定义对象&#x2F;Map 集合</strong>  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">user:</span><br><span class="line">    name: 张三</span><br><span class="line">    age: 18</span><br><span class="line">    password: 123456</span><br><span class="line">```  </span><br><span class="line">**定义数组/List/Set 集合**  </span><br></pre></td></tr></table></figure>
+<p>hobby:<br>    - java<br>    - game<br>    - sport</p>
+<pre><code>*注意：在 yml 格式的配置文件中，如果配置项的值是以 0 开头的，值需要使用&#39;&#39; 引起来，因为以 0 开头在 yml 中表示 8 进制的数据*  
+## 开发规范  
+1. 开发模式：  
+前后端分离开发：  
+前端项目、后端项目 开发和部署是分开的   
+具体的开发流程：  
+需求分析 -&gt; 接口设计 -&gt; 前后端并行开发 -&gt; 测试 -&gt; 联调  
+
+2. Restful 风格  
+Rest（表述性状态转换），它是一种软件架构风格  
+Rest 风格：  
+URL 定位资源，HTTP 动词描述操作    
+请求方式：  
+GET：查询  
+DELETE：删除  
+POST：新增用户  
+PUT：修改   
+*注意：1. REST 是风格，是约定方式，不是规定，可以打破；2.描述功能模块通常使用复数形式，表示此类资源而非单个资源，如:users...*  
+
+3. Apifox  
+Apifox 是一款集成了 Api 文档、Api 调试、Api Mock、Api 测试的一体化协作平台  
+作用：接口文档管理、接口请求测试、Mock 服务    
+由于浏览器地址栏发起的请求，都是 GET 方式的请求，如果我们需要发起 POST、PUT、DELETE 方式的请求，需要借助该类工具  
+
+4. JWT：
+JWT（JSON Web Token）是一种无状态登录认证机制  
+核心思想：  
+不保存登录状态，登录成功后生成一个加密字符串(token)，把用户信息加密进 token 里返回给前端  
+前端请求带 token，服务器验证 token，解析出用户信息  
+**JWT结构**  
+Header（头部）  
+Payload（载荷）  
+Signature（签名）：服务器用密钥生成签名，防止伪造，有人改 Payload，签名就会失效
+
+
+
+</code></pre>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+                <div class="icon arrow-left"></div>
+                <div class="post-link">
+                    <a href="/2026/03/02/Blog-System-v2/">Prev</a>
+                </div>
+            
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2026/02/26/MySQL/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+    
+
+  </body>
+</html>

@@ -14,7 +14,7 @@
 
 
 
-<title>JDBC学习 | Hexo</title>
+<title>spring6 | Hexo</title>
 
 
 
@@ -120,12 +120,12 @@
         <div class="post-title">
             
             
-                JDBC学习
+                spring6
             
             
         </div>
         <span class="post-date">
-            Oct 12, 2025
+            Jan 24, 2026
         </span>
     </div>
     <div class="post-img">
@@ -135,22 +135,39 @@
     </div>
 </div>
     <div class="post-content">
-    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>JDBC主要是把MySQL和Java结合起来，如何用Java操作MySQL，已被框架封装，了解一下，做好笔记</p>
-<h2 id="JDBC介绍"><a href="#JDBC介绍" class="headerlink" title="JDBC介绍"></a>JDBC介绍</h2><ol>
-<li>JDBC技术介绍：JDBC(Java Database Connectivtity)java连接数据库技术，在java代码中，使用JDBC提供的方法，发送字符串类型的SQL语句到数据库管理软件，并且获取语句执行结果，进而实现数据库数据CURD操作的技术</li>
-<li>概念和理解</li>
-<li>JDBC：java连接数据库技术统称</li>
-<li>JDBC接口：java语言只提供规范（接口），规定数据库操作方法，标准的类库存在于java.sql，javax.sql包下</li>
-<li>JDBC具体实现类：各数据库厂商根据java的jdbc规范（接口），完成具体的实现驱动代码（jar），实现代码可以不同，但是方法都相同</li>
+    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>放寒假一个星期后，着手继续为就业做准备吧</p>
+<h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><h2 id="1-spring概述"><a href="#1-spring概述" class="headerlink" title="1. spring概述"></a>1. spring概述</h2><ol>
+<li>Spring 是一款主流的 JavaEE 轻量级开源框架。广义上是指以 Spring Framework 为核心的 Spring 技术栈，由多个不同子项目组成的成熟技术；狭义上特指 Spring Framework，通常将其成为 Spring 框架，核心模块为 IOC 和 AOP<br>IOC：控制反转，将创建对象的过程交给 Spring 进行管理<br>AOP：面相切面编程，不修改源代码的基础上增强代码功能</li>
+<li>Spring Framework 特点：<br>非侵入式、控制反转、面向切面编程、容器、组件化、一站式</li>
+<li>Spring 模块组成  <ol>
+<li>Spring Core：提供IOC、DI、Bean配置装载的基本创建的核心实现<br> Spring-core、spring-benas、spring-context、spring-expression</li>
+<li>Spring AOP：<br> spring-aop、spring-aspects、spring-instrument</li>
+<li>Spring Data Access：<br> spring-jdbc（封装 JDBC 简化 JDBC 操作）、spring-orm、spring-oxm、spring-jms、spring-tx</li>
+<li>Spring Web：<br> spring-web、spring-webmvc、spring-websocket、spring-webflux</li>
+<li>Spring Message：<br> spring-messaging</li>
+<li>Spring test：<br> spring-test</li>
 </ol>
-<h2 id="JDBC核心API"><a href="#JDBC核心API" class="headerlink" title="JDBC核心API"></a>JDBC核心API</h2><ol>
-<li>JDBC基本使用步骤： </li>
-<li>注册驱动，安装依赖的jar包</li>
-<li>建立连接connection</li>
-<li>创建发送SQL语句对象statement</li>
-<li>statement对象发送SQL语句到数据库并获取结果</li>
-<li>解析结果集resultset结果对象</li>
-<li>销毁资源：connection、statement、resultset释放</li>
+</li>
+<li>入门案例开发步骤：  <ol>
+<li>引入 Spring 相关依赖</li>
+<li>创建类，定义属性和方法</li>
+<li>按照 Spring 要求创建配置文件（xml 格式）</li>
+<li>再 Spring 配置文件配置相关信息</li>
+<li>进行最终测试<br> 如何使用反射创建的对象：  <ol>
+<li>加载 bean.xml 配置文件</li>
+<li>对 xml 文件进行解析操作</li>
+<li>获取 xml 文件对 bean 标签属性值（id、class）</li>
+<li>使用反射根据类全路径创建对象</li>
+<li>创建的对象放入 Map 集合中，key 是唯一标识，value 是类的定义（描述信息）</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>启用 Log4j2日志框架：  <ol>
+<li>重要组件组成：日志信息的优先级（Trace（追踪）&lt; Debug（调试）&lt; INFO（信息）&lt; Warn（警告） &lt; ERROR &lt; FATAL）（级别高的会自动屏蔽级别低的日志）、日志信息的输出目的地、日志信息的输出格式</li>
+<li></li>
+</ol>
+</li>
 </ol>
 
 </div> 
@@ -165,7 +182,7 @@
            
                 <div class="icon arrow-left"></div>
                 <div class="post-link">
-                    <a href="/2025/12/01/Javaee%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">Prev</a>
+                    <a href="/2026/01/29/java%E5%9F%BA%E7%A1%80/">Prev</a>
                 </div>
             
         </div>
@@ -173,7 +190,7 @@
             
                 <div class="icon arrow-right"></div>
                 <div class="post-link">
-                  <a href="/2025/08/12/Javase/">Next</a>  
+                  <a href="/2025/12/01/Javaee%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">Next</a>  
                 </div>  
             
         </div>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="John Doe">
+
+
+
+
+
+
+
+<title>Redis | Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Frame.
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/categories/gallery/">Gallery</a>
+              </li> 
+                   
+          
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+        </div>
+        <div class="post-title">
+            
+            
+                Redis
+            
+            
+        </div>
+        <span class="post-date">
+            Mar 4, 2026
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <h1 id="下载与图形化界面"><a href="#下载与图形化界面" class="headerlink" title="下载与图形化界面"></a>下载与图形化界面</h1><p>redis 3.0.504<br>Another-Redis-Desktop-Manager-win-1.17.1  </p>
+<h1 id="Redis-数据类型"><a href="#Redis-数据类型" class="headerlink" title="Redis 数据类型"></a>Redis 数据类型</h1><h2 id="五种常用数据类型"><a href="#五种常用数据类型" class="headerlink" title="五种常用数据类型"></a>五种常用数据类型</h2><p>Redis 存储的是 key-value 结构的数据，其中 key 是字符串类型， value 有五种常用数据类型  </p>
+<ol>
+<li><p>字符串 String<br>普通字符串，redis 中最简单的数据类型  </p>
+</li>
+<li><p>哈希 hash<br>也叫散列，类似于 java 中的 hashmap 结构  </p>
+</li>
+<li><p>列表 list<br>按照插入顺序排序，可以有重复元素，类似于 java 中的 linkedlist  </p>
+</li>
+<li><p>集合 set<br>无序集合，没有重复元素，类似 java 中的 hashset  </p>
+</li>
+<li><p>有序集合 sorted set &#x2F; zset<br>集合中的每个元素关联一个分数（score），根据分数升序排序，没有重复元素</p>
+</li>
+</ol>
+<h1 id="Redis-常用命令"><a href="#Redis-常用命令" class="headerlink" title="Redis 常用命令"></a>Redis 常用命令</h1><h2 id="字符串操作命令"><a href="#字符串操作命令" class="headerlink" title="字符串操作命令"></a>字符串操作命令</h2><ol>
+<li><p>设置指定 key 的值：<br>set key value  </p>
+</li>
+<li><p>获取指定 key 的值：<br>get key  </p>
+</li>
+<li><p>设置指定 key 的值，并将 key 的过期时间设为 seconds 秒：<br>setex key seconds value  </p>
+</li>
+<li><p>只有在 key 不存在时设置 key 的值：<br>setnx key value</p>
+</li>
+</ol>
+<h2 id="哈希操作命令"><a href="#哈希操作命令" class="headerlink" title="哈希操作命令"></a>哈希操作命令</h2><p>Redis hash 是一个 string 类型的 filed 和 value 的映射表，hash 特别适合用于存储对象  </p>
+<ol>
+<li><p>将哈希表 key 中的字段 field 的值设为 value：<br>hset key field value  </p>
+</li>
+<li><p>获取存储在哈希表中指定字段的值：<br>hget key field  </p>
+</li>
+<li><p>删除存储在哈希表中的指定字段<br>hdel key field  </p>
+</li>
+<li><p>获取哈希表中的所有字段<br>hkeys key  </p>
+</li>
+<li><p>获取哈希表中所有值<br>hvals key</p>
+</li>
+</ol>
+<h2 id="列表常用命令"><a href="#列表常用命令" class="headerlink" title="列表常用命令"></a>列表常用命令</h2><p>Redis 列表是简单的字符串列表，按照插入顺序排序  </p>
+<ol>
+<li><p>将一个或多个插入到列表头部：<br>lpush key vakue1 [value2]  </p>
+</li>
+<li><p>获取列表指定范围内的元素：<br>lrange key start stop<br>返回全部元素：lrange key 0 -1   </p>
+</li>
+<li><p>移除并获取列表最后一个元素：<br>rpop key  </p>
+</li>
+<li><p>获取列表长度：<br>llen key</p>
+</li>
+</ol>
+<h2 id="集合操作命令"><a href="#集合操作命令" class="headerlink" title="集合操作命令"></a>集合操作命令</h2><p>Redis set 是 string 类型的无序集合。集合成员是唯一的，集合不能出现重复的数据  </p>
+<ol>
+<li><p>向集合添加一个或多个成员：<br>sadd key member1 [member2]  </p>
+</li>
+<li><p>返回集合中的所有成员：<br>smembers key  </p>
+</li>
+<li><p>获取集合成员数：<br>scard key  </p>
+</li>
+<li><p>返回给定所有集合的交集：<br>sinter key1 [key2]  </p>
+</li>
+<li><p>返回所有给定集合的并集：<br>sunion key1 [key2]  </p>
+</li>
+<li><p>删除集合中的一个或多个成员：<br>srem key member1 [member2]</p>
+</li>
+</ol>
+<h2 id="有序集合操作命令"><a href="#有序集合操作命令" class="headerlink" title="有序集合操作命令"></a>有序集合操作命令</h2><p>Redis 有序集合是 string 类型元素的集合，且不允许有重复成员，每个元素都会关联一个 double 类型的分数  </p>
+<ol>
+<li><p>向有序集合添加一个或多个成员<br>zadd key score1 member1 [score2 member2]  </p>
+</li>
+<li><p>通过索引区间返回有序集合中指定区间内的成员[和分数]<br>zrange key start stop [withscores]  </p>
+</li>
+<li><p>有序集合中对指定成员的分数加上增量 increment<br>zincrby key increment member   </p>
+</li>
+<li><p>移除有序集合中的一个或多个成员<br>zrem key member [member …]</p>
+</li>
+</ol>
+<h2 id="通用命令"><a href="#通用命令" class="headerlink" title="通用命令"></a>通用命令</h2><p>Redis 的通用命令是不分数据类型的，都可以使用的命令：  </p>
+<ol>
+<li><p>查找所有符合给定模式(pattern)的 key：<br>keyse pattern  </p>
+</li>
+<li><p>检查给定 key 是否存在：<br>exists key  </p>
+</li>
+<li><p>返回 key 锁储存的值的类型：<br>type key  </p>
+</li>
+<li><p>key 存在时删除 key：<br>del key</p>
+</li>
+</ol>
+<h1 id="在-java-中操作-Redis"><a href="#在-java-中操作-Redis" class="headerlink" title="在 java 中操作 Redis"></a>在 java 中操作 Redis</h1><h2 id="Redis的-java客户端"><a href="#Redis的-java客户端" class="headerlink" title="Redis的 java客户端"></a>Redis的 java客户端</h2><p>Redis 的 java 客户端，常用的几种：  </p>
+<ol>
+<li><p>Jedis  </p>
+</li>
+<li><p>Lettuce  </p>
+</li>
+<li><p>Spring Data Redis：<br>是 spring 的一部分，对 Redis 底层开发包进行了高度封装。<br>在 spring 项目中，可以使用 Spring Data Redis 来简化操作</p>
+</li>
+</ol>
+<h2 id="Spring-Data-Redis-使用方式"><a href="#Spring-Data-Redis-使用方式" class="headerlink" title="Spring Data Redis 使用方式"></a>Spring Data Redis 使用方式</h2><p>操作步骤：  </p>
+<ol>
+<li>导入 Spring Data Redis 的 maven 坐标  </li>
+<li>配置 Redis 数据源  </li>
+<li>编写配置类，创建 RedisTemplate 对象  </li>
+<li>通过 RedisTemplate 对象操作 Redis</li>
+</ol>
+<h2 id="Redis-相关问题"><a href="#Redis-相关问题" class="headerlink" title="Redis 相关问题"></a>Redis 相关问题</h2><ol>
+<li><p>缓存击穿：指查询一个不存在的数据，mysql 查询不到数据也不会直接写入缓存，会导致每次请求都查数据库<br>解决方案：</p>
+<ol>
+<li>缓存空数据：查询返回的数据为空，仍把空结果进行缓存<br> 优点：简单<br> 缺点：消耗内存，可能发生不一致的问题  </li>
+<li>使用布隆过滤器：布隆过滤器使用 bitmap(位图)，相当于一个以位(bit)为单位的数组，数组每个单元只存二进制数0或1<br> 存数据：通过多个 hash 函数获取 hash 值，根据 hash 计算对应位置<br> 查询： 使用相同的 hash 函数获取 hash 值，根据 hash 计算对应位置是否全为1<br> 误判率：数组越小误判率越大，数组越大误判率越小，同时带来更多内存消耗<br> 布隆过滤器实现方案：Redisson&#x2F;Guava</li>
+</ol>
+</li>
+<li><p>缓存击穿：给某一个 key 设置了过期时间，恰好这时间点对这个 key 有大量的并发请求，这些并发的请求可能瞬间把数据库压垮<br>解决方案：  </p>
+<ol>
+<li>互斥锁（分布式锁）：保证数据强一致性、性能差  </li>
+<li>逻辑过期：高可用、性能优</li>
+</ol>
+</li>
+<li><p>缓存雪崩：同一时段大量的缓存 key 同时失效或 Redis 服务器宕机，导致大量请求到达数据库，带来巨大压力<br>解决方案：  </p>
+<ol>
+<li>给不同的 key 的 TTL 添加随机值  </li>
+<li>给业务增加多级缓存  </li>
+<li>利用 Redis 集群提高服务可用性：哨兵模式、集群模式  </li>
+<li>给缓存业务添加降级限流策略（可做为系统的保底策略，适用于穿透、击穿、雪崩）</li>
+</ol>
+</li>
+<li><p>Redis 合适的应用场景：  </p>
+<ol>
+<li>String：缓存、技术、共享 Session  </li>
+<li>Hash: 存对象  </li>
+<li>List：消息队列  </li>
+<li>Set： 兴趣标签  </li>
+<li>ZSET： 排行榜</li>
+</ol>
+</li>
+<li><p>Redis 6.0之前为什么一直不使用多线程：  </p>
+<ol>
+<li>使用 Redis，CPU 不是瓶颈，受制于内存、网络  </li>
+<li>提高 Redis 性能，可用 Pipeline（命令批量处理）  </li>
+<li>单线程内部维护比较低  </li>
+<li>多线程会需要线程切换、加锁、解锁，也有可能导致死锁问题  </li>
+<li>惰性 Rehash（渐进式 Rehash）阻塞减少</li>
+</ol>
+</li>
+</ol>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+                <div class="icon arrow-left"></div>
+                <div class="post-link">
+                    <a href="/2026/03/05/TechDevHub/">Prev</a>
+                </div>
+            
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2026/03/02/Blog-System-v2/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+    
+
+  </body>
+</html>

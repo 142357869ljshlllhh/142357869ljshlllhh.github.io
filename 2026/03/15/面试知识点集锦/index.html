@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="John Doe">
+
+
+
+
+
+
+
+<title>面试知识点集锦 | Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Frame.
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/categories/gallery/">Gallery</a>
+              </li> 
+                   
+          
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+        </div>
+        <div class="post-title">
+            
+            
+                面试知识点集锦
+            
+            
+        </div>
+        <span class="post-date">
+            Mar 15, 2026
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <h1 id="一、Java-基础和面向对象"><a href="#一、Java-基础和面向对象" class="headerlink" title="一、Java 基础和面向对象"></a>一、Java 基础和面向对象</h1><h2 id="面向对象："><a href="#面向对象：" class="headerlink" title="面向对象："></a>面向对象：</h2><h3 id="1-封装"><a href="#1-封装" class="headerlink" title="1. 封装"></a>1. 封装</h3><ol>
+<li>封装是指把数据和操作数据的方法封装在类中，并隐藏内部实现细节  </li>
+<li>为什么要封装：  <ol>
+<li>隐藏内部实现  </li>
+<li>提高安全性  </li>
+<li>提高代码可维护性</li>
+</ol>
+</li>
+</ol>
+<h3 id="2-继承"><a href="#2-继承" class="headerlink" title="2. 继承"></a>2. 继承</h3><ol>
+<li>子类继承父类的属性和方法  </li>
+<li>Java 为什么是单继承：<br>避免菱形继承问题，假如同时继承两个父类中拥有同名方法，子类会不知道该调用谁</li>
+</ol>
+<h3 id="3-多态"><a href="#3-多态" class="headerlink" title="3. 多态"></a>3. 多态</h3><ol>
+<li>父类引用指向子类对象，在运行时根据对象类型决定调用的方法  </li>
+<li>多态的三个条件：  <ol>
+<li>继承关系  </li>
+<li>方法重写  </li>
+<li>父类引用指向子类对象</li>
+</ol>
+</li>
+<li>多态的好处：<br>提高代码的拓展性、降低耦合</li>
+</ol>
+<h3 id="4-抽象"><a href="#4-抽象" class="headerlink" title="4. 抽象"></a>4. 抽象</h3><ol>
+<li>抽象是指只定义规范，不实现细节  </li>
+<li>抽象两种实现方式：抽象类、接口</li>
+</ol>
+<h3 id="5-接口-VS-抽象类："><a href="#5-接口-VS-抽象类：" class="headerlink" title="5. 接口 VS 抽象类："></a>5. 接口 VS 抽象类：</h3><ol>
+<li>关键字：抽象类(abstract class)、接口(interface)  </li>
+<li>继承：抽象类(单继承)、接口(多实现)  </li>
+<li>方法：抽象类(可以有抽象方法和普通方法)、接口(默认是抽象方法，Java8 以后可以有 default 和 static 方法)  </li>
+<li>成员变量：抽象类(可以有)、接口(接口成员变量默认 public static final)</li>
+</ol>
+<h3 id="6-重载-VS-重写"><a href="#6-重载-VS-重写" class="headerlink" title="6. 重载 VS 重写"></a>6. 重载 VS 重写</h3><ol>
+<li>重载(Overload)：方法名相同，参数不同、与返回值无关    </li>
+<li>重写(Override)：子类重写父类方法、参数必须相同、返回值必须兼容，访问权限不能更小</li>
+</ol>
+<h3 id="7-this-VS-super"><a href="#7-this-VS-super" class="headerlink" title="7. this VS super"></a>7. this VS super</h3><ol>
+<li>this 表示当前对象  </li>
+<li>super 表示父类对象</li>
+</ol>
+<h3 id="8-final"><a href="#8-final" class="headerlink" title="8. final"></a>8. final</h3><ol>
+<li>final 修饰的基本类型不能修改，引用类型引用地址不能变，对象内容可以变  </li>
+<li>final 修饰的方法不能被重写  </li>
+<li>final 修饰的类不能被继承</li>
+</ol>
+<h3 id="9-equlas-VS"><a href="#9-equlas-VS" class="headerlink" title="9. equlas VS &#x3D;&#x3D;"></a>9. equlas VS &#x3D;&#x3D;</h3><ol>
+<li>&#x3D;&#x3D; 对于基本数据类型比较的是值；对于对象类型比较的是地址  </li>
+<li>equlas() 是 Object 类的方法，默认比较地址，但很多类如 String 重写了 equals()方法，比较的是内容</li>
+</ol>
+<h2 id="Java-基础："><a href="#Java-基础：" class="headerlink" title="Java 基础："></a>Java 基础：</h2><h3 id="1-String-为什么不可变？"><a href="#1-String-为什么不可变？" class="headerlink" title="1. String 为什么不可变？"></a>1. String 为什么不可变？</h3><ol>
+<li>String 底层的字符数组被 final 修饰，引用地址不能改变  </li>
+<li>String 类被 final 修饰，不能被继承，保证行为不被修改  </li>
+<li>String 没有提供修改内部字符数组的方法，因此一旦创建内容就无法被改变</li>
+</ol>
+<h3 id="2-String-不可变的好处"><a href="#2-String-不可变的好处" class="headerlink" title="2. String 不可变的好处"></a>2. String 不可变的好处</h3><ol>
+<li>可以安全使用字符串常量池，提高内存利用率  </li>
+<li>天然线程安全  </li>
+<li>可以安全作为 HashMap 的 key，因为 hash 值不会变化</li>
+</ol>
+<h3 id="3-StringBuilder-为什么线程不安全"><a href="#3-StringBuilder-为什么线程不安全" class="headerlink" title="3. StringBuilder 为什么线程不安全"></a>3. StringBuilder 为什么线程不安全</h3><ol>
+<li>StringBuilder 的底层字符数组没有被 final 修饰  </li>
+<li>StringBuilder 提供了 append()等修改方法</li>
+</ol>
+<h3 id="4-字符串常量池"><a href="#4-字符串常量池" class="headerlink" title="4. 字符串常量池"></a>4. 字符串常量池</h3><p>String 使用字符串常量池来提高内存的利用率，当 String a &#x3D; “abc” 时，JVM 会先检查字符串常量池是否存在 “abc”，如果不存在则会创建，如果存在则会直接返回引用</p>
+<h3 id="5-new-String"><a href="#5-new-String" class="headerlink" title="5. new String"></a>5. new String</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String a = &quot;abc&quot;;</span><br><span class="line">String b = new String(&quot;abc&quot;);</span><br><span class="line">// a== b 为 false</span><br><span class="line">// a.equals(b) 为 true</span><br></pre></td></tr></table></figure>
+<p>a &#x3D;&#x3D; b 的结果是 false，因为 a 指向字符串常量池的对象，而 new String(“abc”),会在堆中创建一个新的 String 对象，所有两个引用地址不相同<br>a.equals(b)的结果是 true，因为 String 重写 equals()方法，比较的是字符串内容，而不是地址  </p>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2026/03/12/Java%E9%9B%86%E5%90%88/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+    
+
+  </body>
+</html>

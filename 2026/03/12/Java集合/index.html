@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="John Doe">
+
+
+
+
+
+
+
+<title>Java集合 | Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Frame.
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/categories/gallery/">Gallery</a>
+              </li> 
+                   
+          
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+                
+                    <span class="post-tag">
+                        <a href="/tags/Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/">
+                            Java学习路线
+                        </a>
+                    </span>    
+                           
+            
+        </div>
+        <div class="post-title">
+            
+            
+                Java集合
+            
+            
+        </div>
+        <span class="post-date">
+            Mar 12, 2026
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <h1 id="一、集合家谱"><a href="#一、集合家谱" class="headerlink" title="一、集合家谱"></a>一、集合家谱</h1><ol>
+<li>单列集合 Collection：  <ol>
+<li>List：  <ol>
+<li>ArrayList</li>
+<li>LinkedList  </li>
+<li>Vector</li>
+</ol>
+</li>
+<li>Set：  <ol>
+<li>HashSet  <ol>
+<li>LinkedHashSet</li>
+</ol>
+</li>
+<li>TreeSet</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>双列集合 Map：  <ol>
+<li>HashMap  <ol>
+<li>LinkedHashMap</li>
+</ol>
+</li>
+<li>TreeMap</li>
+<li>Hashtable</li>
+</ol>
+</li>
+</ol>
+<h1 id="单列集合"><a href="#单列集合" class="headerlink" title="单列集合"></a>单列集合</h1><h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><ol>
+<li><p>ArrayList 底层：<br>ArrayList 底层是动态数组，数组在内存上开辟一段连续的内存空间，有索引时查找，可以根据寻址公式：目标地址 &#x3D; 起始地址 + i * 单个元素所占空间，时间复杂度为 O(1)，增加和删除最后一个一位，时间复杂度为 O(1)，其他部分由于需要移位，时间复杂度为 O(n)  </p>
+</li>
+<li><p>ArrayList 扩容机制：<br>ArrayList 初始容量为0，在第一次 add 时会初始化为 10，当容量小于当前占用容量(size)+1时，会使用 grow 扩容1.5倍，每次扩容时都要拷贝数组<br>扩容大小设为1.5倍的原因：是为了在减少扩容次数和降低空间浪费之间取得平衡，扩容倍数过小则会导致频繁扩容和大量数组复制，过大会导致内存浪费  </p>
+</li>
+<li><p>LinkedList 底层：<br>LinkedList 底层是双向链表，双向链表具有多个节点，每个节点都有前驱指针指向前一个节点和后继指针指向后一个节点，查找时需要遍历双向链表，会根据实际来选择从头节点或者尾节点开始遍历，时间复杂度为 O(n)，插入和删除时，除了头尾节点时间复杂度为 O(1)，其他部位由于需要遍历链表，时间复杂度为 O(n)  </p>
+</li>
+<li><p>如何保证 ArrayList 和 LinkedList 线程安全：<br>使用线程安全的 ArrayList 和 LinkedList  </p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Object&gt; syncArrayList = Collections.synchronizedList(new ArrayList&lt;&gt;());</span><br><span class="line">List&lt;Object&gt; syncLinkedList = Collections.synchronizedList(new LinkedList&lt;&gt;());</span><br></pre></td></tr></table></figure>
+<p> 在方法内部使用，局部变量线程安全  </p>
+</li>
+<li><p>如何实现数组和 List 之间的转换：  </p>
+<ol>
+<li>数组转 List：使用 JDK 中 java.util.Arrays 工具类的 asList 方法<br> 修改数组内容后，List 受影响  </li>
+<li>List 转数组：使用 List 的 toArray 方法，无参 toArray 方法返回 Object 数组，传入初始化长度数组对象，返回该数组对象<br> 修改 List 后，数组不受影响</li>
+</ol>
+</li>
+</ol>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+                <div class="icon arrow-left"></div>
+                <div class="post-link">
+                    <a href="/2026/03/15/%E9%9D%A2%E8%AF%95%E7%9F%A5%E8%AF%86%E7%82%B9%E9%9B%86%E9%94%A6/">Prev</a>
+                </div>
+            
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2026/03/05/TechDevHub/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+    
+
+  </body>
+</html>
